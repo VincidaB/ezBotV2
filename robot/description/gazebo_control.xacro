@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo>
+        <plugin name="gazebo_omni_drive" filename="libgazebo_omni_drive.so">
+            <North>first_wheel_joint</North>
+            <West>second_wheel_joint</West>
+            <South>third_wheel_joint</South>
+            <East>second_wheel_joint</East>
+            <commandTopic>/omnidirectional_controller/cmd_vel_unstamped</commandTopic>
+            
+            <wheel_separation>0.25</wheel_separation>
+            <wheel_diameter>0.06</wheel_diameter>
+            <WheelSeparationW>0.25</WheelSeparationW>
+            <WheelSeparationL>0.25</WheelSeparationL>
+            <wheelDiameter>0.06</wheelDiameter>
+        
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>false</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+
+            <robotBaseFrame>base_link</robotBaseFrame>
+            
+            <odometry_frame>odom</odometry_frame>
+            <publishOdom>true</publishOdom>
+            <publishOdomTF>true</publishOdomTF>
+        </plugin>
+
+    </gazebo>
+
+</robot>

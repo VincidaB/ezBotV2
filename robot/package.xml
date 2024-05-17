@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>ezbot-v2</name>
+  <version>0.0.2</version>
+  <description>
+    A ROS2 package containing a collection of nodes for the ezBotV2 robot.
+  </description>
+  <maintainer email="vincent.belpois@gmail.com">Vincent Belpois</maintainer>
+  <license>GNU GPL v3</license>
+
+  <url type="website">https://github.com/VincidaB/ezBotV2</url>
+  <url type="repository">https://github.com/VincidaB/ezBotV2</url>
+  <author>Vincent Belpois</author>
+  <author email="vincent.belpois@gmail.com">Vincent Belpois</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+
+</package>
