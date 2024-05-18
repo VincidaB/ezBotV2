@@ -25,7 +25,5 @@
             <publishOdom>true</publishOdom>
             <publishOdomTF>true</publishOdomTF>
         </plugin>
-
     </gazebo>
-
 </robot>
