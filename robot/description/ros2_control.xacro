@@ -2,24 +2,27 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <ros2_control name="hellothere" type="system">
-    
-      
+
         <hardware>
+
             <plugin>omnidrive3_rppico/omnidrive3RpPicoHardware</plugin>
-            <param name="wheel1_name">roue_avant_joint</param>
-            <param name="wheel2_name">roue_gauche_joint</param>
-            <param name="wheel3_name">roue_arriere_joint</param>
+            <!--
+            <param name="device">/dev/pts/6</param>
+            -->
+            <param name="device">/dev/pts/69</param>
+            <param name="baudrate">115200</param>
+            <param name="wheel1_name">first_wheel_joint</param>
+            <param name="wheel2_name">second_wheel_joint</param>
+            <param name="wheel3_name">third_wheel_joint</param>
 
             <param name="loop_rate">30</param>
-            <param name="device">/dev/pts/6</param>
-            <param name="baudrate">115200</param>
 
             <param name="timeout_ms">10000</param>
             <param name="enc_counts_per_rev">1600</param>
         </hardware>
   
 
-        <joint name="roue_avant_joint">
+        <joint name="first_wheel_joint">
             <command_interface name="velocity"> 
                 <param name="min">-10</param>
                 <param name="max">10</param> 
@@ -27,7 +30,7 @@
             <state_interface name="position"/>
             <state_interface name="velocity"/>
         </joint>
-        <joint name="roue_gauche_joint">
+        <joint name="second_wheel_joint">
             <command_interface name="velocity">
                 <param name="min">-10</param>
                 <param name="max">10</param>
@@ -35,7 +38,7 @@
             <state_interface name="position"/>
             <state_interface name="velocity"/>
         </joint>
-        <joint name="roue_arriere_joint">
+        <joint name="third_wheel_joint">
             <command_interface name="velocity">
                 <param name="min">-10</param>
                 <param name="max">10</param>
