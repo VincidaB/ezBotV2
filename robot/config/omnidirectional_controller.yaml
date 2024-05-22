@@ -1,7 +1,11 @@
 controller_manager:
   ros__parameters:
     update_rate: 30
+    # apparently using sim time with ros2 control and hardware
+    # interfaces seems to be brocken. I have no rate control of
+    # ros2_control updates and loops go way too fast
     #use_sim_time: true
+    
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -12,14 +16,14 @@ controller_manager:
 omnidirectional_controller:
   ros__parameters:
     wheel_names:
-      - roue_avant_joint
-      - roue_gauche_joint
-      - roue_arriere_joint
+      - first_wheel_joint
+      - second_wheel_joint
+      - third_wheel_joint
 
-    robot_radius: 0.175
+    robot_radius: 0.17
     wheel_radius: 0.03
 
-    publish_rate: 30.0
+    publish_rate: 10.0
     odom_frame_id: odom
     base_frame_id: base_link
     pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
