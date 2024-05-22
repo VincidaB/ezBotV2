@@ -26,6 +26,7 @@
 #include "omnidirectional_controllers/kinematics.hpp"
 
 #include "omnidirectional_controllers/types.hpp"
+#include <iostream>
 
 namespace omnidirectional_controllers {
 
@@ -43,28 +44,27 @@ RobotVelocity Kinematics::getBodyVelocity(const std::vector<double> & wheels_vel
   double wm0 = wheels_vel.at(0);
   double wm1 = wheels_vel.at(1);
   double wm2 = wheels_vel.at(2);
-  double wm3 = wheels_vel.at(3);
-
-  vel.vx = (wm3 - wm1)* robot_params_.wheel_radius;
+  // TODO update to 3 wheeled robot
+  vel.vx = (wm0 - wm1)* robot_params_.wheel_radius;
 
   vel.vy = (wm0 - wm2) * robot_params_.wheel_radius;
   
-  vel.omega = (1/robot_params_.robot_radius) * (wm0 + wm1 + wm2 + wm3) 
+  vel.omega = (1/robot_params_.robot_radius) * (wm0 + wm1 + wm2) 
               * robot_params_.wheel_radius;
 
   return vel;
 }
-
 std::vector<double> Kinematics::getWheelsAngularVelocities(RobotVelocity vel) {
   double vx = vel.vx;
   double vy = vel.vy;
   double wl = vel.omega * robot_params_.robot_radius;
-
-  angular_vel_vec_[0] = (wl + vy) / robot_params_.wheel_radius;
-  angular_vel_vec_[1] = (wl + vx) / robot_params_.wheel_radius;
-  angular_vel_vec_[2] = (wl - vy) / robot_params_.wheel_radius;
-  angular_vel_vec_[3] = (wl - vx) / robot_params_.wheel_radius;
   
+  
+  angular_vel_vec_[0] = (-vy - wl) / robot_params_.wheel_radius;
+  angular_vel_vec_[1] = (vx*sqrt(3)/2 +  vy*0.5 -wl) / robot_params_.wheel_radius;
+  angular_vel_vec_[2] = (-vx*sqrt(3)/2 + vy*0.5 -wl) / robot_params_.wheel_radius;
+
+
   return angular_vel_vec_;
 }
 
@@ -75,8 +75,7 @@ void Kinematics::setRobotParams(RobotParams robot_params) {
 
 void Kinematics::initializeParams() {
   angular_vel_vec_.reserve(OMNI_ROBOT_MAX_WHEELS);
-  angular_vel_vec_ = {0, 0, 0, 0};
-  // removed gamma (in our case, x_robot )
+  angular_vel_vec_ = {0, 0, 0};
   }
 
 Kinematics::~Kinematics() {}
