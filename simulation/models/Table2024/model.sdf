@@ -79,7 +79,7 @@
               <kp>1e+13</kp>
               <kd>1</kd>
               <max_vel>0.01</max_vel>
-              <min_depth>0</min_depth>
+              <min_depth>0.01</min_depth>
             </ode>
             <bullet>
               <split_impulse>1</split_impulse>
