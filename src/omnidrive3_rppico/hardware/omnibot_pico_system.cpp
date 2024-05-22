@@ -207,7 +207,7 @@ hardware_interface::return_type omnidrive3RpPicoHardware::read(
     return hardware_interface::return_type::ERROR;
   }
 
-  comms_.read_encoder_values(wheel_1_.enc, wheel_2_.enc, wheel_3_.enc);
+  //comms_.read_encoder_values(wheel_1_.enc, wheel_2_.enc, wheel_3_.enc);
 
   double delta_seconds = period.seconds();
 
