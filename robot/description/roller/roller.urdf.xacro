@@ -10,7 +10,10 @@
 	  <parent link="${parent}"/>
 	  <child link="${prefix}_roller_link"/>
 	  <xacro:insert_block name="joint_axis"/>
-    <dynamics damping="0.0" friction="1.0"/>
+    <!--
+      Setting friction too high (1.0 tested) result in weird movement and behavior 
+    -->
+    <dynamics damping="0.0" friction="0.01"/>
 	</joint>
 
 	<link name="${prefix}_roller_link">
@@ -48,7 +51,7 @@
             <contact>
             <ode>
                 <max_vel>10</max_vel>
-                <min_depth>0.001</min_depth>
+                <min_depth>0.01</min_depth>
             </ode>
             </contact>
         </surface>
