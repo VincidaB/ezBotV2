@@ -5,10 +5,9 @@ from ament_index_python.packages import get_package_share_directory
 
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.actions import DeclareLaunchArgument
 import launch_ros.actions
-from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
@@ -18,7 +17,8 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
 
-    robot_package_name='ezbot-v2' #<--- CHANGE ME
+    robot_package_name='ezbot-v2'
+    simulation_package_name='ezbot-v2-simulation' 
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -42,8 +42,39 @@ def generate_launch_description():
                                    '-y','-1.0',
                                    '-z', '1.0' ],
                         output='screen')
-
     
+    delayed_spawner = TimerAction(
+        period=5.0,
+        actions=[spawn_entity],
+    )
+
+    controller_params_file = os.path.join(get_package_share_directory(robot_package_name), 'config', 'omnidirectional_controller.yaml')
+    
+     
+    controller_manager = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[controller_params_file],
+        remappings = [('/controller_manager/robot_description', '/robot_description')],
+    )
+
+    delayed_controller_manager = TimerAction(
+        period=1.0,
+        actions=[controller_manager],
+    )
+
+
+    omnidrive_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['omnidirectional_controller'],
+    )
+    delayed_omnidrive_spawner = TimerAction(
+        period=10.0,
+        actions=[omnidrive_spawner],
+    )
+
+
     # Launch them all!
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -53,7 +84,9 @@ def generate_launch_description():
             #default_value=[os.path.join(get_package_share_directory("ezbot-v2-simulation"), 'worlds', 'table2024Poteaux.world'), ''],
             description='SDF world file'),
         rsp,
-        spawn_entity,
-        gazebo
+        delayed_spawner,
+        gazebo,
+        delayed_controller_manager,
+        delayed_omnidrive_spawner,
         #joystick
     ])
