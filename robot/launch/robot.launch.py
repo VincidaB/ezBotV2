@@ -61,7 +61,7 @@ def generate_launch_description():
 
 
     delayed_controller_manager = TimerAction(
-        period=.0,
+        period=1.0,
         actions=[controller_manager],
     )
 
