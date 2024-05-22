@@ -1,20 +1,21 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    
     <gazebo>
-        <plugin name="gazebo_omni_drive" filename="libgazebo_omni_drive.so">
+        <plugin name="ezbot_propulsion_gazebo_plugin" filename="libezbot_propulsion_gazebo_plugin.so">
             <North>first_wheel_joint</North>
             <West>second_wheel_joint</West>
             <South>third_wheel_joint</South>
-            <East>second_wheel_joint</East>
-            <commandTopic>/omnidirectional_controller/cmd_vel_unstamped</commandTopic>
-            
-            <wheel_separation>0.25</wheel_separation>
+
+
+            <robotRadius>0.17</robotRadius>            
             <wheel_diameter>0.06</wheel_diameter>
-            <WheelSeparationW>0.25</WheelSeparationW>
-            <WheelSeparationL>0.25</WheelSeparationL>
             <wheelDiameter>0.06</wheelDiameter>
-        
+            <stepsPerRevolution>200</stepsPerRevolution>
+            <microstepping>16</microstepping>
+
+
             <publish_odom>true</publish_odom>
             <publish_odom_tf>false</publish_odom_tf>
             <publish_wheel_tf>true</publish_wheel_tf>
@@ -26,4 +27,6 @@
             <publishOdomTF>true</publishOdomTF>
         </plugin>
     </gazebo>
+    
+    
 </robot>
