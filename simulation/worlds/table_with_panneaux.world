@@ -29,7 +29,7 @@
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
-      <shadows>1</shadows>
+      <shadows>0</shadows>
     </scene>
     <audio>
       <device>default</device>
@@ -121,7 +121,7 @@
                 <kp>1e+13</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <min_depth>0.01</min_depth>
               </ode>
               <bullet>
                 <split_impulse>1</split_impulse>
