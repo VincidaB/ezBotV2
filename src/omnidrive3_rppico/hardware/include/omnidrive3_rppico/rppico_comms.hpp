@@ -8,6 +8,9 @@
 #include "rclcpp/rclcpp.hpp"
 #include <sys/stat.h>
 
+//what's needed for socket communication
+#include <sys/socket.h>
+#include <arpa/inet.h>
 
 
 LibSerial::BaudRate convert_baud_rate(int baud_rate)
@@ -38,32 +41,37 @@ public:
 
   void connect(const std::string &serial_device, int32_t baud_rate, int32_t timeout_ms)
   {  
-    std::cout << "Connecting to serial device: " << serial_device << " at baud rate: " << baud_rate << std::endl;
+    RCLCPP_INFO(rclcpp::get_logger("omnidrive3RpPicoHardware"), "Connecting to serial device: %s at baud rate: %d", serial_device.c_str(), baud_rate);
     timeout_ms_ = timeout_ms;
     
     // Check if the serial device exists
     if (!rcpputils::fs::exists(serial_device))
     {
-      RCLCPP_WARN(rclcpp::get_logger("omnidrive3RpPicoHardware"), "Serial device %s does not exist", serial_device.c_str());
-      
-      // the interface is not created in /dev but in /tmp because of permission issues 
-      pid_t pid = fork();
-      if (pid == 0)
-      {
-        execlp("socat", "socat", "-d", "-d", "pty,raw,echo=0,link=/tmp/rppicoTX", "pty,raw,echo=0,link=/tmp/rppicoRX", (char*)NULL);
-        
-      }else if (pid < 0)
-        {
-        RCLCPP_ERROR(rclcpp::get_logger("omnidrive3RpPicoHardware"), "Failed to create socat");
+      sim_mode = true;
 
-      }else{
-        RCLCPP_INFO(rclcpp::get_logger("omnidrive3RpPicoHardware"), "Created socat, currently in parent process");
-        std::this_thread::sleep_for(std::chrono::seconds(2));
-        serial_conn_.Open("/dev/pts/11");
-        serial_conn_.SetBaudRate(convert_baud_rate(baud_rate));
-        return;
+      clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+      if (clientSocket == -1) {
+          std::cerr << "Failed to create socket" << std::endl;
+          return;
       }
+
+      // Specify server details
+      serverAddress.sin_family = AF_INET;
+      serverAddress.sin_port = htons(12346); // Use the same port as the server
+      if (inet_pton(AF_INET, "127.0.0.1", &serverAddress.sin_addr) <= 0) { // Replace with server IP
+          std::cerr << "Invalid address or address not supported" << std::endl;
+          return;
+      }
+
+      // Connect to the server
+      
+      if (::connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) < 0) {
+          std::cerr << "Connection failed" << std::endl;
+          return;
+      }
+      socket_connected = true;
       return;
+      
     }
 
 
@@ -83,41 +91,52 @@ public:
 
   bool connected() const
   {
-    return serial_conn_.IsOpen();
+    return sim_mode || serial_conn_.IsOpen();
   }
 
 
   std::string send_msg(const std::string &msg_to_send, bool print_output = false)
   {
-    serial_conn_.FlushIOBuffers(); // Just in case
-    serial_conn_.Write(msg_to_send);
 
     std::string response = "";
-    //skip the response part for now
-    /*
-    try
-    {
-      // Responses end with \r\n so we will read up to (and including) the \n.
-      serial_conn_.ReadLine(response, '\n', timeout_ms_);
-    }
-    catch (const LibSerial::ReadTimeout&)
-    {
-        std::cerr << "The ReadByte() call has timed out." << std::endl ;
-    }
-    */
-    if (print_output)
-    {
-      std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
-    }
-    
+    if (!sim_mode){
+      serial_conn_.FlushIOBuffers(); // Just in case
+      serial_conn_.Write(msg_to_send);
 
-    return response;
+      if (print_output)
+      {
+        std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
+      }
+      
+
+      return response;
+    }else{
+      if (!socket_connected){
+        if (::connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) < 0) {
+          return response;
+        }
+        socket_connected = true;
+        std::cerr << "### Connected to socket ###" << std::endl;
+        return response;
+      }
+
+      const char* message = msg_to_send.c_str();
+
+      errno = 0;
+      if (send(clientSocket, message, strlen(message), 0) < 0) {
+          std::cerr << "Failed to send message" << std::endl;
+          std::cerr << strerror(errno) << std::endl;
+          return response;
+      }
+  
+      return response;
+    }
   }
 
 
   void send_empty_msg()
   {
-    std::string response = send_msg("\r");
+    std::string response = send_msg("\n");
   }
 
   void read_encoder_values(int &val_1, int &val_2,int &val_3)
@@ -137,7 +156,7 @@ public:
   void set_motor_values(int val_1, int val_2, int val_3)
   {
     std::stringstream ss;
-    ss << "m " << val_1 << " " << val_2 << " " << val_3 << "\r";
+    ss << "m " << val_1 << " " << val_2 << " " << val_3 << "\n";
     send_msg(ss.str());
     }
 
@@ -149,8 +168,13 @@ public:
   }
 
 private:
-    LibSerial::SerialPort serial_conn_;
-    int timeout_ms_;
+  bool sim_mode = false;
+  bool socket_connected = false;
+  LibSerial::SerialPort serial_conn_;
+  int sock;
+  int timeout_ms_;
+  int clientSocket;
+  sockaddr_in serverAddress{};
 };
 
 #endif // omnidrive3_RPPICO__OMNIBOT_SYSTEM_HPP_
