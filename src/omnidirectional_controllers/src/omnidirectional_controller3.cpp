@@ -78,6 +78,35 @@ CallbackReturn OmnidirectionalController3::on_init() {
     auto_declare<double>("cmd_vel_timeout", cmd_vel_timeout_.count() / 1000.0);
     auto_declare<int>("velocity_rolling_window_size", 10);
     auto_declare<bool>("use_stamped_vel", use_stamped_vel_);
+    
+    
+    auto_declare<bool>("linear_has_velocity_limits", odom_params_.linear_has_velocity_limits);
+    auto_declare<double>("linear_min_velocity", odom_params_.linear_min_velocity);
+    auto_declare<double>("linear_max_velocity", odom_params_.linear_max_velocity);
+
+    auto_declare<bool>("linear_has_acceleration_limits", odom_params_.linear_has_acceleration_limits);
+    auto_declare<double>("linear_min_acceleration", odom_params_.linear_min_acceleration);
+    auto_declare<double>("linear_max_acceleration", odom_params_.linear_max_acceleration);
+
+    auto_declare<bool>("linear_has_jerk_limits", odom_params_.linear_has_jerk_limits);
+    auto_declare<double>("linear_min_jerk", odom_params_.linear_min_jerk);
+    auto_declare<double>("linear_max_jerk", odom_params_.linear_max_jerk);
+
+    auto_declare<bool>("angular_has_velocity_limits", odom_params_.angular_has_velocity_limits);
+    auto_declare<double>("angular_min_velocity", odom_params_.angular_min_velocity);
+    auto_declare<double>("angular_max_velocity", odom_params_.angular_max_velocity);
+
+    auto_declare<bool>("angular_has_acceleration_limits", odom_params_.angular_has_acceleration_limits);
+    auto_declare<double>("angular_min_acceleration", odom_params_.angular_min_acceleration);
+    auto_declare<double>("angular_max_acceleration", odom_params_.angular_max_acceleration);
+
+    auto_declare<bool>("angular_has_jerk_limits", odom_params_.angular_has_jerk_limits);
+    auto_declare<double>("angular_min_jerk", odom_params_.angular_min_jerk);
+    auto_declare<double>("angular_max_jerk", odom_params_.angular_max_jerk);
+
+    auto_declare<double>("publish_rate", publish_rate_);
+
+
   } catch (const std::exception & e) {
     fprintf(stderr, "Exception thrown during init stage with message: %s \n", e.what());
     return CallbackReturn::ERROR;
@@ -165,15 +194,28 @@ CallbackReturn OmnidirectionalController3::on_configure(
   use_stamped_vel_ = node_->get_parameter("use_stamped_vel").as_bool();
 
   // checking parameters of speed, acceleration, and jerk limits
-  //linear
-  auto linear_has_velocity_limits = node_->get_parameter("linear_has_velocity_limits");
-  if (linear_has_velocity_limits.get_type() == rclcpp::ParameterType::PARAMETER_NOT_SET) {
+  
+  bool linear_has_velocity_limits;
+
+  RCLCPP_INFO(logger, "Checking linear parameters");
+  try {
+      // Attempt to retrieve the parameter and assign it to the previously declared variable
+      linear_has_velocity_limits = node_->get_parameter("linear_has_velocity_limits").as_bool();
+  } catch (const std::exception& e) {
+      RCLCPP_ERROR(node_->get_logger(), "Exception caught while getting parameter 'linear_has_velocity_limits': %s", e.what());
+  }
+
+
+  if (!linear_has_velocity_limits) {
     RCLCPP_WARN(logger, "Parameter 'linear_has_velocity_limits' not set. Using default value.");
     odom_params_.linear_has_velocity_limits = false;
   } else {
-    odom_params_.linear_has_velocity_limits = linear_has_velocity_limits.as_bool();
+    RCLCPP_INFO(logger, "Parameter 'linear_has_velocity_limits' set.");
+    odom_params_.linear_has_velocity_limits = linear_has_velocity_limits;
   }
   if (odom_params_.linear_has_velocity_limits) {
+    RCLCPP_INFO(logger, "Checking linear velocity limits.");
+
     odom_params_.linear_min_velocity = node_->get_parameter("linear_min_velocity").as_double();
     odom_params_.linear_max_velocity = node_->get_parameter("linear_max_velocity").as_double();
   }
@@ -418,6 +460,8 @@ void OmnidirectionalController3::velocityCommandUnstampedCallback(
 
   this->cmd_vel_->twist = *cmd_vel;
   this->cmd_vel_->header.stamp = node_->get_clock()->now();
+  //RCLCPP_INFO(node_->get_logger(), "Received unstamped command at time : %f",
+  //  this->cmd_vel_->header.stamp.nanosec); 
 }
 
 controller_interface::return_type OmnidirectionalController3::update(

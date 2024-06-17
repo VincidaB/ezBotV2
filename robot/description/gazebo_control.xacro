@@ -3,28 +3,20 @@
 
     
     <gazebo>
-        <plugin name="ezbot_propulsion_gazebo_plugin" filename="libezbot_propulsion_gazebo_plugin.so">
+        <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+            <!--
             <North>first_wheel_joint</North>
             <West>second_wheel_joint</West>
             <South>third_wheel_joint</South>
 
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+            <parameters>$(find ezbot-v2)/config/gazebo_controller.yaml</parameters>
+            -->
+            <parameters>$(find ezbot-v2)/config/omnidirectional_controller.yaml</parameters>
 
-            <robotRadius>0.17</robotRadius>            
-            <wheel_diameter>0.06</wheel_diameter>
-            <wheelDiameter>0.06</wheelDiameter>
-            <stepsPerRevolution>200</stepsPerRevolution>
-            <microstepping>16</microstepping>
 
 
-            <publish_odom>true</publish_odom>
-            <publish_odom_tf>false</publish_odom_tf>
-            <publish_wheel_tf>true</publish_wheel_tf>
-
-            <robotBaseFrame>base_link</robotBaseFrame>
-            
-            <odometry_frame>odom</odometry_frame>
-            <publishOdom>true</publishOdom>
-            <publishOdomTF>true</publishOdomTF>
         </plugin>
     </gazebo>
     

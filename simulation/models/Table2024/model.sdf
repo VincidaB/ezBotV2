@@ -14,7 +14,7 @@
           <izz>0.166667</izz>
         </inertia>
       </inertial>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <visual name='visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
@@ -23,16 +23,6 @@
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
-        <material>
-          <lighting>1</lighting>
-          <script>
-            <uri>materials/scripts</uri>
-            <uri>materials/textures</uri>
-            <name>tableMat/Diffuse</name>
-            <name>Gazebo/Grey</name>
-          </script>
-          <shader type='pixel'/>
-        </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
       </visual>
@@ -93,6 +83,8 @@
         </surface>
       </collision>
     </link>
+    <pose>0 0 0 0 0 0</pose>
+
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
   </model>

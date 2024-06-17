@@ -41,7 +41,7 @@
   </library_effects>
   <library_images>
     <image id="vinyle_accessoires_2024_FINAL_V1-1_png" name="vinyle_accessoires_2024_FINAL_V1-1_png">
-      <init_from>vinyle_accessoires_2024_FINAL_V1-1.png</init_from>
+      <init_from>materials/textures/vinyle_accessoires_2024_FINAL_V1-1.png</init_from>
     </image>
   </library_images>
   <library_materials>

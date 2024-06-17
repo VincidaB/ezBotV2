@@ -12,7 +12,7 @@ install(
 
 install(
     DIRECTORY models/
-    DESTINATION $ENV{HOME}/.gazebo/models/
+    DESTINATION $ENV{HOME}/.gz/models/
 )
 
 

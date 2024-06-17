@@ -29,7 +29,7 @@
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
-      <shadows>0</shadows>
+      <shadows>1</shadows>
     </scene>
     <audio>
       <device>default</device>
@@ -56,7 +56,7 @@
             <izz>0.166667</izz>
           </inertia>
         </inertial>
-        <pose>-1 -1 0 0 -0 0</pose>
+        <pose>0.0 0.0 0.0 0 -0 0</pose>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
@@ -65,16 +65,6 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://Table2024/materials/scripts</uri>
-              <uri>model://Table2024/materials/textures</uri>
-              <name>tableMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -121,7 +111,7 @@
                 <kp>1e+13</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
-                <min_depth>0.01</min_depth>
+                <min_depth>0.001</min_depth>
               </ode>
               <bullet>
                 <split_impulse>1</split_impulse>
@@ -140,7 +130,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>-0.038178 0.032945 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
       <sim_time>3715 502000000</sim_time>
@@ -361,16 +351,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -508,16 +489,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -655,16 +627,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -802,16 +765,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -949,16 +903,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -1096,16 +1041,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -1243,16 +1179,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -1390,16 +1317,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -1537,16 +1455,7 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>model://SolarPanel/materials/scripts</uri>
-              <uri>model://SolarPanel/materials/textures</uri>
-              <name>solarPanelMat/Diffuse</name>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
+
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
