@@ -1,22 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    
+
     <gazebo>
         <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-            <!--
-            <North>first_wheel_joint</North>
-            <West>second_wheel_joint</West>
-            <South>third_wheel_joint</South>
-
-            <robot_param>robot_description</robot_param>
-            <robot_param_node>robot_state_publisher</robot_param_node>
-            <parameters>$(find ezbot-v2)/config/gazebo_controller.yaml</parameters>
-            -->
             <parameters>$(find ezbot-v2)/config/omnidirectional_controller.yaml</parameters>
-
-
-
+            <ros>
+                <namespace>$(arg namespace)</namespace>
+            </ros>
         </plugin>
     </gazebo>
     
