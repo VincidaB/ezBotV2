@@ -97,10 +97,7 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
+
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -384,10 +381,7 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
+
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -522,10 +516,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -660,10 +650,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -798,10 +784,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -936,10 +918,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -1074,10 +1052,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -1212,10 +1186,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -1350,10 +1320,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
@@ -1488,10 +1454,6 @@
                 </ode>
               </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
