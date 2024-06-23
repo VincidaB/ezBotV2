@@ -210,26 +210,47 @@
 
 
     <link name="chassis">
-        <visual>
-            <origin xyz="0.0 0 0.0"/>
-            <geometry>
-                <mesh filename="model://ezbotv2/ezbotv2.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="gray">
-                <color rgba="0.5 0.5 0.5 1"/>
-            </material>
-        </visual>
-        <collision>
-            <origin xyz="0.0 0 0.175"/>
-            <geometry>
-                <box size="0.11 0.11 0.35"/>
-            </geometry>
-        </collision>
-        <xacro:inertial_box mass="0.5" x="0.11" y="0.11" z="0.35">
-            <origin xyz="0.0 0 0.175" rpy="0 0 0"/>
-        </xacro:inertial_box>
+      <visual>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+              <mesh filename="model://ezbotv2/ezbotv2.dae" scale="0.001 0.001 0.001" />
+          </geometry>
+          <material name="red"/>
+      </visual>
+      <collision>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+            <mesh filename="model://ezbotv2/ezbotv2.dae" scale="0.001 0.001 0.001" />
+          </geometry>
+      </collision>
     </link>
 
+    <link name="aruco">
+      <visual>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+              <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+          </geometry>
+      </visual>
+      <collision>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+            <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+          </geometry>
+      </collision>
+      <xacro:inertial_box mass="0.5" x="0.11" y="0.11" z="0.35">
+          <origin xyz="0.0 0 0.0" rpy="0 0 0"/>
+      </xacro:inertial_box>
+    </link>
+
+    <joint name="aruco-joint" type="fixed">
+      <parent link="chassis"/>
+      <child link="aruco"/>
+      <origin xyz="0 0 0.47"/>
+    </joint>
+
+
+  <!-- 
     <gazebo reference="chassis">
         <visual>
             <material>
@@ -240,7 +261,7 @@
             </material>
         </visual>
     </gazebo>
-
+    -->
 
 
 
