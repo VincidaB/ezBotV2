@@ -42,10 +42,6 @@
     <mu2>1.9</mu2>
     <kp>1e15</kp>
     <kd>1e13</kd>
-    <bounce>
-      <restitution_coefficient>0.01</restitution_coefficient>
-      <threshold>0</threshold>
-    </bounce>
     <collision>
         <surface>
             <contact>
