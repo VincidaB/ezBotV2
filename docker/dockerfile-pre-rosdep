@@ -1,0 +1,6 @@
+FROM osrf/ros:jazzy-desktop-full
+
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    rosdep update
+

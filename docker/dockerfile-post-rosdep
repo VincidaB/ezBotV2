@@ -1,0 +1,8 @@
+FROM ezbot-dev-pre-rosdep:latest
+
+# RUN git clone https://github.com/VincidaB/ezBotV2.git /ezBotV2
+COPY . /ezBotV2
+WORKDIR /ezBotV2
+RUN rosdep install --from-paths . --ignore-src -r -y
+ENV GZ_SIM_RESOURCE_PATH=/root/.gz/models/
+#RUN apt list | grep ros-jazzy
