@@ -43,9 +43,7 @@ def generate_launch_description():
         remappings=remappings,
         parameters=params,
     )
-    #print("###################")
-    #print(params)
-
+    
     # Launch!
     return LaunchDescription([
         DeclareLaunchArgument(
