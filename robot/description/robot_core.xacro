@@ -2,9 +2,13 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
+    <arg name="color" default="blue"/>
+    <xacro:property name="cmp_color" value="$(arg color)"/>
+
     <xacro:include filename="inertial_macros.xacro" />
     <xacro:include filename="$(find ezbot-v2)/description/omni_wheel/omni_wheel.urdf.xacro" />
     <xacro:include filename="$(find ezbot-v2)/description/roller/roller.urdf.xacro" />
+
     <material name="white">
         <color rgba="1 1 1 1" />
     </material>
@@ -225,11 +229,17 @@
       </collision>
     </link>
 
+
     <link name="aruco">
       <visual>
           <origin xyz="0.0 0 0.0"/>
           <geometry>
-              <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+              <xacro:if value='${cmp_color == "blue"}'>
+                <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+              </xacro:if>
+              <xacro:if value="${cmp_color == 'yellow'}">
+                <mesh filename="model://aruco_tags/aruco_tag_6.dae" scale="1 1 1" />
+              </xacro:if>
           </geometry>
       </visual>
       <collision>

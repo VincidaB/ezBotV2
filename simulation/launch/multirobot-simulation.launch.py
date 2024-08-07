@@ -121,15 +121,15 @@ def generate_launch_description():
     rsp1 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(robot_package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot1'}.items()
+                )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot1', 'color' : 'yellow'}.items()
     )
     rsp2 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(robot_package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot2'}.items()
+                )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot2','color' : 'blue'}.items()
     )
     
-    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_panneaux.world')
+    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
 
     gz_server_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -164,8 +164,11 @@ def generate_launch_description():
 
     
     bridge = Node(package='ros_gz_bridge', executable='parameter_bridge',
-                arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock', '/robot1/camera@sensor_msgs/msg/Image@gz.msgs.Image',
-                            '/robot1/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist'
+                arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+                           '/robot1/camera@sensor_msgs/msg/Image@gz.msgs.Image',
+                           '/robot2/camera@sensor_msgs/msg/Image@gz.msgs.Image',
+                           '/robot1/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
+                           '/robot2/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist'
                             ],
                 output='screen')
 

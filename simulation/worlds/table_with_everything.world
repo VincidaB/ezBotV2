@@ -1,0 +1,4209 @@
+<sdf version='1.10'>
+  <world name='default'>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>6.0000000000000002e-06 2.3e-05 -4.1999999999999998e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>3715 502000000</sim_time>
+      <real_time>19 549903622</real_time>
+      <wall_time>1706524303 174274623</wall_time>
+      <iterations>19506</iterations>
+      <model name='SolarPanel_0'>
+        <pose>2.0369999999999999 -2.7245699999999999 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0369999999999999 -2.7245699999999999 0.099631999999999998 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0369999999999999 -2.7245699999999999 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone'>
+        <pose>2.03634 -2.4997199999999999 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.03634 -2.4997199999999999 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.03634 -2.4997199999999999 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_0'>
+        <pose>2.0360299999999998 -2.2755899999999998 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0360299999999998 -2.2755899999999998 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0360299999999998 -2.2755899999999998 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_1'>
+        <pose>2.0370499999999998 -1.7243299999999999 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0370499999999998 -1.7243299999999999 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0370499999999998 -1.7243299999999999 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_2'>
+        <pose>2.0364300000000002 -1.50007 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0364300000000002 -1.50007 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0364300000000002 -1.50007 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_3'>
+        <pose>2.03667 -1.2754000000000001 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.03667 -1.2754000000000001 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.03667 -1.2754000000000001 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_4'>
+        <pose>2.0365500000000001 -0.72410699999999995 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0365500000000001 -0.72410699999999995 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0365500000000001 -0.72410699999999995 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_5'>
+        <pose>2.0363699999999998 -0.49986399999999998 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0363699999999998 -0.49986399999999998 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0363699999999998 -0.49986399999999998 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='SolarPanel_0_clone_6'>
+        <pose>2.0367899999999999 -0.27499400000000002 0.044631999999999998 0 0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='solar_panel'>
+          <pose>2.0367899999999999 -0.27499400000000002 0.099631999999999998 0 0 -1.5707899999999999</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+        <link name='solar_panel_base_link'>
+          <pose>2.0367899999999999 -0.27499400000000002 0.044631999999999998 0 0 1.5708</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <model name='Table_2024'>
+        <pose>1 1 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>0 0 0 0 0 0</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 0 0</acceleration>
+          <wrench>0 0 0 0 0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='false'>
+      <camera name='user_camera'>
+        <pose>3.32761 -3.8981499999999998 1.85473 0 0.64000100000000015 2.2336100000000001</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <model name='Table_2024'>
+      <static>true</static>
+      <link name='link_0'>
+        <gravity>false</gravity>
+        <inertial>
+          <inertia>
+            <ixx>0.16666700000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666700000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666700000000001</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://Table2024/table2024.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://Table2024/table2024.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <static>false</static>
+      <allow_auto_disable>true</allow_auto_disable>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>8.8817841970012523e-16 -4.4408920985006262e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0369999999999999 -2.7245699999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>8.8817841970012523e-16 -8.8817841970012523e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.03634 -2.4997199999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_0'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>8.8817841970012523e-16 0 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0360299999999998 -2.2755899999999998 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_1'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>6.6613381477509392e-16 4.4408920985006262e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0370499999999998 -1.7243299999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_2'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>2.2204460492503131e-16 -4.4408920985006262e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0364300000000002 -1.50007 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_3'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>4.4408920985006262e-16 4.4408920985006262e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.03667 -1.2754000000000001 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_4'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>2.2204460492503131e-16 0 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0365500000000001 -0.72410699999999995 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_5'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>3.3306690738754696e-16 4.4408920985006262e-16 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0363699999999998 -0.49986399999999998 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='SolarPanel_0_clone_6'>
+      <link name='solar_panel_base_link'>
+        <gravity>false</gravity>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+      <link name='solar_panel'>
+        <inertial>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+        </inertial>
+        <pose>6.6613381477509392e-16 0 0.055 0 0 3.1415899999999999</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <collide_without_contact>false</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>true</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10000000000000</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+      </link>
+      <allow_auto_disable>true</allow_auto_disable>
+      <joint name='revolution' type='revolute'>
+        <parent>solar_panel_base_link</parent>
+        <child>solar_panel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0.0050000000000000001</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+      </joint>
+      <joint name='fix' type='fixed'>
+        <parent>world</parent>
+        <child>solar_panel_base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <pose>2.0367899999999999 -0.27499400000000002 0.044631999999999998 0 0 1.5708000000000006</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.360179456462201 -0.9506477666523182 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_0'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2836622102966466 -0.92864303198521259 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_1'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2193133264073377 -0.9479548182897416 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_2'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.3677955824821897 -1.0497429587157769 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_3'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2975663575258229 -1.0668057484984725 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_4'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.21215457357818 -1.0426224273530589 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_5'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.76038765305396971 -0.95397081075234624 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_6'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.68443245151425547 -0.9175018419367601 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_7'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.61749618409635343 -0.95085208252025 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_8'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.75956750021734631 -1.0432499367316035 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_9'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.70076040059850042 -1.0596673415247944 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_10'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.6296561178344251 -1.0434657839648602 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_11'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.58798115037459942 -1.5186695398473964 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_12'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.57278452585802619 -1.4400593749685044 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_13'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.5186509068527978 -1.4733918568546436 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_14'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.51274546992780001 -1.5685086130890789 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_15'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.44913160393658186 -1.5100517375998344 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_16'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.43696358106290828 -1.4291666901252948 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_17'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.74503902007755074 -1.945533592182525 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_18'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.67535575777201484 -1.9248205999820047 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_19'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.61219978659667595 -1.9526783761856126 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_20'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.74883161095361794 -2.0462406851493422 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_21'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.68671060132311668 -2.0742121006985648 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_22'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.61601481383044798 -2.0457833042459299 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_23'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.3553495180494926 -1.9459437684202601 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_24'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2995291292706459 -1.9216652208860674 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_25'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2330378569414615 -1.9438222072882883 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_26'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.338562182582669 -2.0458517258644227 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_27'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2703937880515286 -2.0801638071072444 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_28'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.2126607859572247 -2.0425386274480593 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_29'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.5648061848801218 -1.4925844142991336 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_30'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.5074794163706924 -1.564255842076302 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_31'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.5369922074000306 -1.4210961049132194 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_32'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.4417177073235194 -1.442449284868158 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_33'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.4798094090768434 -1.5008934834441989 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Plant_white_34'>
+      <static>false</static>
+      <link name='link_0'>
+        <gravity>true</gravity>
+        <inertial>
+          <pose>0 0 0.02 0 0 0</pose>
+          <mass>0.025000000000000001</mass>
+          <inertia>
+            <ixx>2.5000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.5000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>7.9999999999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <transparency>0</transparency>
+          <cast_shadows>true</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>3</max_contacts>
+          <pose>0 0 0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.025000000000000001</radius>
+              <length>0.10000000000000001</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>true</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.20000000000000001</soft_erp>
+                <kp>10</kp>
+                <kd>1000000000</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.4120220086158164 -1.5374308808706862 0 0 0 0</pose>
+      <allow_auto_disable>true</allow_auto_disable>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
