@@ -17,10 +17,11 @@ def generate_launch_description():
     # Check if we're told to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
     namespace = LaunchConfiguration('namespace')
+    color = LaunchConfiguration('color')
 
-    frame_prefix = [namespace, '/']
-    remappings = [('/tf', 'tf'),
-                  ('/tf_static', 'tf_static')]
+    frame_prefix = [namespace, '_']
+#    remappings = [('/robot9/tf', 'tf'),
+#                  ('/robot9/tf_static', 'tf_static')]      # removing remappings fixes namespaced tf trees 
 
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('ezbot-v2'))
@@ -31,7 +32,8 @@ def generate_launch_description():
     params = [{'use_sim_time': use_sim_time},
                 {'robot_description': 
                     Command(['xacro ', xacro_file, ' ', 
-                            'namespace:=', namespace])},
+                            'namespace:=', namespace, ' ',
+                            'color:=', color])},
                 {'frame_prefix': frame_prefix}
     ]
     node_robot_state_publisher = Node(
@@ -40,7 +42,7 @@ def generate_launch_description():
         name='robot_state_publisher',
         namespace=namespace,
         output='screen',
-        remappings=remappings,
+#        remappings=remappings,             # removing remappings fixes namespaced tf trees
         parameters=params,
     )
     
