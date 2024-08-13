@@ -288,6 +288,9 @@
       <allow_auto_disable>true</allow_auto_disable>
       <pose>0 0 0 0 0 0</pose>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>9</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0'>
       <link name='solar_panel_base_link'>
@@ -429,6 +432,9 @@
       <pose>2.0369999999999999 -2.7245699999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone'>
       <link name='solar_panel_base_link'>
@@ -570,6 +576,9 @@
       <pose>2.03634 -2.4997199999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_0'>
       <link name='solar_panel_base_link'>
@@ -711,6 +720,9 @@
       <pose>2.0360299999999998 -2.2755899999999998 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>      
     </model>
     <model name='SolarPanel_0_clone_1'>
       <link name='solar_panel_base_link'>
@@ -852,6 +864,9 @@
       <pose>2.0370499999999998 -1.7243299999999999 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_2'>
       <link name='solar_panel_base_link'>
@@ -993,6 +1008,9 @@
       <pose>2.0364300000000002 -1.50007 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_3'>
       <link name='solar_panel_base_link'>
@@ -1134,6 +1152,9 @@
       <pose>2.03667 -1.2754000000000001 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_4'>
       <link name='solar_panel_base_link'>
@@ -1275,6 +1296,9 @@
       <pose>2.0365500000000001 -0.72410699999999995 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_5'>
       <link name='solar_panel_base_link'>
@@ -1416,6 +1440,9 @@
       <pose>2.0363699999999998 -0.49986399999999998 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='SolarPanel_0_clone_6'>
       <link name='solar_panel_base_link'>
@@ -1557,6 +1584,9 @@
       <pose>2.0367899999999999 -0.27499400000000002 0.044631999999999998 0 0 1.5708000000000006</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>5</label>
+      </plugin>
     </model>
     <model name='Plant_white'>
       <static>false</static>
@@ -1630,6 +1660,9 @@
       <pose>1.360179456462201 -0.9506477666523182 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_0'>
       <static>false</static>
@@ -1703,6 +1736,9 @@
       <pose>1.2836622102966466 -0.92864303198521259 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_1'>
       <static>false</static>
@@ -1776,6 +1812,9 @@
       <pose>1.2193133264073377 -0.9479548182897416 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_2'>
       <static>false</static>
@@ -1849,6 +1888,9 @@
       <pose>1.3677955824821897 -1.0497429587157769 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_3'>
       <static>false</static>
@@ -1922,6 +1964,9 @@
       <pose>1.2975663575258229 -1.0668057484984725 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_4'>
       <static>false</static>
@@ -1995,6 +2040,9 @@
       <pose>1.21215457357818 -1.0426224273530589 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_5'>
       <static>false</static>
@@ -2068,6 +2116,9 @@
       <pose>0.76038765305396971 -0.95397081075234624 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_6'>
       <static>false</static>
@@ -2141,6 +2192,9 @@
       <pose>0.68443245151425547 -0.9175018419367601 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_7'>
       <static>false</static>
@@ -2214,6 +2268,9 @@
       <pose>0.61749618409635343 -0.95085208252025 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_8'>
       <static>false</static>
@@ -2287,6 +2344,9 @@
       <pose>0.75956750021734631 -1.0432499367316035 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_9'>
       <static>false</static>
@@ -2360,6 +2420,9 @@
       <pose>0.70076040059850042 -1.0596673415247944 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_10'>
       <static>false</static>
@@ -2433,6 +2496,9 @@
       <pose>0.6296561178344251 -1.0434657839648602 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_11'>
       <static>false</static>
@@ -2506,6 +2572,9 @@
       <pose>0.58798115037459942 -1.5186695398473964 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_12'>
       <static>false</static>
@@ -2579,6 +2648,9 @@
       <pose>0.57278452585802619 -1.4400593749685044 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_13'>
       <static>false</static>
@@ -2652,6 +2724,9 @@
       <pose>0.5186509068527978 -1.4733918568546436 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_14'>
       <static>false</static>
@@ -2725,6 +2800,9 @@
       <pose>0.51274546992780001 -1.5685086130890789 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_15'>
       <static>false</static>
@@ -2798,6 +2876,9 @@
       <pose>0.44913160393658186 -1.5100517375998344 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_16'>
       <static>false</static>
@@ -2871,6 +2952,9 @@
       <pose>0.43696358106290828 -1.4291666901252948 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_17'>
       <static>false</static>
@@ -2944,6 +3028,9 @@
       <pose>0.74503902007755074 -1.945533592182525 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_18'>
       <static>false</static>
@@ -3017,6 +3104,9 @@
       <pose>0.67535575777201484 -1.9248205999820047 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_19'>
       <static>false</static>
@@ -3090,6 +3180,9 @@
       <pose>0.61219978659667595 -1.9526783761856126 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_20'>
       <static>false</static>
@@ -3163,6 +3256,9 @@
       <pose>0.74883161095361794 -2.0462406851493422 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_21'>
       <static>false</static>
@@ -3236,6 +3332,9 @@
       <pose>0.68671060132311668 -2.0742121006985648 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_22'>
       <static>false</static>
@@ -3309,6 +3408,9 @@
       <pose>0.61601481383044798 -2.0457833042459299 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_23'>
       <static>false</static>
@@ -3382,6 +3484,9 @@
       <pose>1.3553495180494926 -1.9459437684202601 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_24'>
       <static>false</static>
@@ -3455,6 +3560,9 @@
       <pose>1.2995291292706459 -1.9216652208860674 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_25'>
       <static>false</static>
@@ -3528,6 +3636,9 @@
       <pose>1.2330378569414615 -1.9438222072882883 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_26'>
       <static>false</static>
@@ -3601,6 +3712,9 @@
       <pose>1.338562182582669 -2.0458517258644227 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_27'>
       <static>false</static>
@@ -3674,6 +3788,9 @@
       <pose>1.2703937880515286 -2.0801638071072444 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_28'>
       <static>false</static>
@@ -3747,6 +3864,9 @@
       <pose>1.2126607859572247 -2.0425386274480593 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_29'>
       <static>false</static>
@@ -3820,6 +3940,9 @@
       <pose>1.5648061848801218 -1.4925844142991336 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_30'>
       <static>false</static>
@@ -3893,6 +4016,9 @@
       <pose>1.5074794163706924 -1.564255842076302 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_31'>
       <static>false</static>
@@ -3966,6 +4092,9 @@
       <pose>1.5369922074000306 -1.4210961049132194 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_32'>
       <static>false</static>
@@ -4039,6 +4168,9 @@
       <pose>1.4417177073235194 -1.442449284868158 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_33'>
       <static>false</static>
@@ -4112,6 +4244,9 @@
       <pose>1.4798094090768434 -1.5008934834441989 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <model name='Plant_white_34'>
       <static>false</static>
@@ -4185,6 +4320,9 @@
       <pose>1.4120220086158164 -1.5374308808706862 0 0 0 0</pose>
       <allow_auto_disable>true</allow_auto_disable>
       <self_collide>false</self_collide>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
     </model>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
