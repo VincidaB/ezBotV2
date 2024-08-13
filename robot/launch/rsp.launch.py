@@ -19,7 +19,7 @@ def generate_launch_description():
     namespace = LaunchConfiguration('namespace')
     color = LaunchConfiguration('color')
 
-    frame_prefix = [namespace, '_']
+    frame_prefix = [namespace, '/']
 #    remappings = [('/robot9/tf', 'tf'),
 #                  ('/robot9/tf_static', 'tf_static')]      # removing remappings fixes namespaced tf trees 
 
