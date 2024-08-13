@@ -48,3 +48,5 @@
       angular_has_acceleration_limits: true
       angular_max_acceleration: 2.0
       angular_min_acceleration: -2.0
+
+      enable_tf_prefix: true 

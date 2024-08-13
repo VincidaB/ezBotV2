@@ -106,6 +106,7 @@ CallbackReturn OmnidirectionalController3::on_init() {
 
     auto_declare<double>("publish_rate", publish_rate_);
 
+    auto_declare<bool>("tf_frame_prefix_enable", odom_params_.tf_frame_prefix_enable);
 
   } catch (const std::exception & e) {
     fprintf(stderr, "Exception thrown during init stage with message: %s \n", e.what());
@@ -311,6 +312,25 @@ CallbackReturn OmnidirectionalController3::on_configure(
       rclcpp::SystemDefaultsQoS(),
       std::bind(&OmnidirectionalController3::velocityCommandUnstampedCallback, this, _1));
   }
+
+  std::string tf_prefix = "";
+  if (odom_params_.tf_frame_prefix_enable)
+  {
+    tf_prefix = std::string(get_node()->get_namespace());
+   
+    if (tf_prefix == "/")
+    {
+      tf_prefix = "";
+    }
+    else
+    {
+      tf_prefix = tf_prefix + "/";
+    }
+  }
+
+  odom_params_.odom_frame_id = tf_prefix + odom_params_.odom_frame_id;
+  odom_params_.base_frame_id = tf_prefix + odom_params_.base_frame_id;
+
 
   // initialize odometry publisher and messasge
   odometry_publisher_ = node_->create_publisher<nav_msgs::msg::Odometry>(

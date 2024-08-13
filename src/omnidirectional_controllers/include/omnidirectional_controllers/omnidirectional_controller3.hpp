@@ -99,6 +99,7 @@ protected:
     double angular_max_acceleration = std::numeric_limits<double>::quiet_NaN();
     double angular_min_jerk = std::numeric_limits<double>::quiet_NaN();
     double angular_max_jerk = std::numeric_limits<double>::quiet_NaN();
+    bool tf_frame_prefix_enable = true;
   } odom_params_;
 
   bool use_stamped_vel_ = true;
