@@ -3,7 +3,7 @@
   <name>ezbot-v2-simulation</name>
   <version>0.0.2</version>
   <description>
-    A ROS2 package containing a collection of nodes for the ezBotV2 robot.
+    A ROS2 package containing a collection of nodes for the ezBotV2 simulation.
   </description>
   <maintainer email="vincent.belpois@gmail.com">Vincent Belpois</maintainer>
   <license>GNU GPL v3</license>
