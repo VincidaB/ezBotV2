@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <arg name="color" default="blue"/>
+    <xacro:property name="cmp_color" value="$(arg color)"/>
+
+    <xacro:include filename="inertial_macros.xacro" />
+    <xacro:include filename="$(find ezbot-v2)/description/omni_wheel/omni_wheel.urdf.xacro" />
+    <xacro:include filename="$(find ezbot-v2)/description/roller/roller.urdf.xacro" />
+
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+
+    
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <link name="base_link">
+
+    </link>
+
+    <!--Chassis-->
+
+    <joint name= "chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0.0 0 0"/>
+    </joint>
+
+    <link name="base_footprint">
+    </link>
+
+    <joint name= "base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <xacro:property name="M_PI" value="3.14159274"/>
+
+
+
+    <xacro:wheel_v0 prefix="first" parent="base_link">
+        <origin xyz="0.0 0.175 0.03" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        
+    </xacro:wheel_v0>
+
+    <xacro:roller_v0 prefix="r1_F" parent="first_wheel_link">
+        <origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r2_F" parent="first_wheel_link">
+        <origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r3_F" parent="first_wheel_link">
+        <origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.513274 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r4_F" parent="first_wheel_link">
+        <origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r5_F" parent="first_wheel_link">
+        <origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+
+    <xacro:roller_v0 prefix="r6_F" parent="first_wheel_link">
+        <origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+        <axis xyz="0 1 0"/>
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r7_F" parent="first_wheel_link">
+        <origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r8_F" parent="first_wheel_link">
+        <origin xyz="0.0141439 0.006 0.0194674" rpy="-2.513274 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r9_F" parent="first_wheel_link">
+        <origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+    </xacro:roller_v0>
+    <xacro:roller_v0 prefix="r10_F" parent="first_wheel_link">
+        <origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+        <axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+
+    <!-- 2nd wheel -->
+  <xacro:wheel_v0 prefix="second" parent="base_link">
+	<origin xyz="-0.1515 -0.0875 0.03" rpy="0 0 ${2*M_PI/3}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_S" parent="second_wheel_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_S" parent="second_wheel_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_S" parent="second_wheel_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.513274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_S" parent="second_wheel_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_S" parent="second_wheel_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_S" parent="second_wheel_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_S" parent="second_wheel_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_S" parent="second_wheel_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.513274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_S" parent="second_wheel_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_S" parent="second_wheel_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+<!-- 3rd wheel -->
+  <xacro:wheel_v0 prefix="third" parent="base_link">
+	<origin xyz="0.1515 -0.0875 0.03" rpy="0 0 ${-2*M_PI/3}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_T" parent="third_wheel_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_T" parent="third_wheel_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_T" parent="third_wheel_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.513274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_T" parent="third_wheel_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_T" parent="third_wheel_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_T" parent="third_wheel_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_T" parent="third_wheel_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_T" parent="third_wheel_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.513274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_T" parent="third_wheel_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_T" parent="third_wheel_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+
+    <xacro:wheel_trans_v0 prefix="first"/>
+    <xacro:wheel_trans_v0 prefix="second"/>
+    <xacro:wheel_trans_v0 prefix="third"/>
+
+    <xacro:wheel_gazebo_v0 prefix="first"/>
+    <xacro:wheel_gazebo_v0 prefix="second"/>
+    <xacro:wheel_gazebo_v0 prefix="third"/>
+
+
+
+
+    <link name="chassis">
+      <visual>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+              <mesh filename="model://ezbotv2/ezbotv2.dae" scale="0.001 0.001 0.001" />
+          </geometry>
+          <material name="red"/>
+      </visual>
+      <collision>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+            <mesh filename="model://ezbotv2/ezbotv2.dae" scale="0.001 0.001 0.001" />
+          </geometry>
+      </collision>
+    </link>
+
+
+    <link name="aruco">
+      <visual>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+              <xacro:if value='${cmp_color == "blue"}'>
+                <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+              </xacro:if>
+              <xacro:if value="${cmp_color == 'yellow'}">
+                <mesh filename="model://aruco_tags/aruco_tag_6.dae" scale="1 1 1" />
+              </xacro:if>
+          </geometry>
+      </visual>
+      <collision>
+          <origin xyz="0.0 0 0.0"/>
+          <geometry>
+            <mesh filename="model://aruco_tags/aruco_tag_1.dae" scale="1 1 1" />
+          </geometry>
+      </collision>
+      <xacro:inertial_box mass="0.5" x="0.11" y="0.11" z="0.35">
+          <origin xyz="0.0 0 0.0" rpy="0 0 0"/>
+      </xacro:inertial_box>
+    </link>
+
+    <joint name="aruco-joint" type="fixed">
+      <parent link="chassis"/>
+      <child link="aruco"/>
+      <origin xyz="0 0 0.47"/>
+    </joint>
+
+
+  <!-- 
+    <gazebo reference="chassis">
+        <visual>
+            <material>
+                <ambient>0.9 0.9 0.9 1</ambient>
+                <diffuse>0.1 0.1 0.2 1</diffuse>
+                <specular>0 0 0 0</specular>
+                <emissive>0 0 0 1</emissive>
+            </material>
+        </visual>
+    </gazebo>
+    -->
+
+
+
+
+
+    
+    <!--bloc aruco-->
+
+    <!--
+    <joint name= "bloc_aruco_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="bloc_aruco"/>
+        <origin xyz="0.055 0 0"/>
+    </joint>
+
+    <link name="bloc_aruco">
+        <visual>
+            <origin xyz="0 0 0.47"/>
+            <geometry>
+                <box size="0.11 0.11 0.001"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.47"/>
+            <geometry>
+                <box size="0.11 0.11 0.001"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.5" x="0.11" y="0.11" z="0.001">
+            <origin xyz="0 0 0.47" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <gazebo reference="bloc_aruco" link="">
+        <visual>
+        <material>
+            <script>
+                <uri>$(find ezbot-v2)/description/media/materials/scripts</uri>
+                <uri>$(find ezbot-v2)/description/media/materials/textures</uri>
+                <name>arucoMat</name>
+            </script>
+        </material>
+        </visual>
+    </gazebo>
+    -->
+
+
+
+</robot>

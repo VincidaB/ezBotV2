@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='ezbotv2'>
+
+    <link name="base_link_ezbot_v2">
+
+      <gravity>0</gravity>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>ezvbotv2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+  </model>
+</sdf>

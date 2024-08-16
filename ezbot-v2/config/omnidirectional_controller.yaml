@@ -1,0 +1,52 @@
+/**:
+  controller_manager:
+    ros__parameters:
+      update_rate: 30
+      # apparently using sim time with ros2 control and hardware
+      # interfaces seems to be brocken. I have no rate control of
+      # ros2_control updates and loops go way too fast
+      #use_sim_time: true
+      
+
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+
+      omnidirectional_controller:
+        type: omnidirectional_controllers/OmnidirectionalController3
+
+  omnidirectional_controller:
+    ros__parameters:
+      wheel_names:
+        - first_wheel_joint
+        - second_wheel_joint
+        - third_wheel_joint
+
+      robot_radius: 0.17
+      wheel_radius: 0.03
+
+      publish_rate: 10.0
+      odom_frame_id: odom
+      base_frame_id: base_link
+      pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+      twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+      odom_numeric_integration_method: runge_kutta2
+
+      open_loop: true
+      enable_odom_tf: true
+
+      cmd_vel_timeout: 5.0
+      use_stamped_vel: false
+
+      linear_has_velocity_limits: true
+      linear_min_velocity: -5.0
+      linear_max_velocity: 5.0
+
+      linear_has_acceleration_limits: true
+      linear_max_acceleration: 2.0
+      linear_min_acceleration: -2.0
+
+      angular_has_acceleration_limits: true
+      angular_max_acceleration: 2.0
+      angular_min_acceleration: -2.0
+
+      enable_tf_prefix: true 
