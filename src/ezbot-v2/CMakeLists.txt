@@ -6,14 +6,14 @@ find_package(ament_cmake REQUIRED)
 
 
 install(
-    DIRECTORY launch description meshes config
+    DIRECTORY launch description meshes config models
     DESTINATION share/${PROJECT_NAME}
 )
 
-install(
-    DIRECTORY models/
-    DESTINATION $ENV{HOME}/.gz/models/
-)
+#install(
+#    DIRECTORY models/
+#    DESTINATION $ENV{HOME}/.gz/models/
+#)
 
 
 ament_package()
