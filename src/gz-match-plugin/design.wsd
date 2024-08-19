@@ -1,0 +1,119 @@
+@startuml
+
+class gzMatchPlugin {
+	- robot1: Entity
+	- robot2: Entity
+	- world: World
+	- team1 : Team
+	- team2 : Team
+	- actionList: List<GameAction> 
+	+ startMatch(): void
+	+ timeRemaining(): float
+	+ isMatchFinished(): Boolean
+	+ getTeam1(): Entity
+	+ getTeam2(): Entity
+	+ getWorld(): World
+}
+
+class gzMatchPlugin implements System, ISystemConfigure, ISystemPostUpdate {
+}
+
+
+Interface ISystemConfigure {
+	+ Configure(): void
+}
+
+Interface ISystemPostUpdate {
+	+ PostUpdate(): void
+}
+
+class Team{
+	- name: String
+	- color : Stringx
+	- scorePrediction : int
+	- robot : Entity
+	+ removePlayer(player: Entity): void
+	+ getPlayers(): List<Entity>
+	+ getName(): String 
+	+ setRobot(Robot: Entity): void
+	+ setPrediction(int: score): void // need to expose this to ros2 so that the algorithm can set the score
+}
+
+Team "1" *-- "2" gzMatchPlugin : Contains
+
+abstract class GameAction implements IupdateAction, getScores{
+	- world: World
+	- team1 : Team
+	- team2 : Team
+	- actionName : String // for printing scores
+	- runningScore1: int 
+	- runningScore2: int 
+	+ updateAction(): void
+	+ GameAction(): GameAction
+	+ GameAction(Team : team1): GameAction
+	+ GameAction(Team : team2): GameAction
+	+ GameAction(Team : team1, Team : team2): GameAction
+	+ GameAction(Team : team1, Team : team2): GameAction
+	+ GameAction(Team : team1, Team : team2, world World): GameAction
+	+ setWorld(World : world): void
+}
+
+interface getScores{
+	+ getScores(score1 : *int, score2 : *int): void
+}
+
+interface IupdateAction{
+	+ updateAction(): void
+}
+
+gzMatchPlugin --|> IupdateAction
+gzMatchPlugin --|> getScores
+
+GameAction "1" *-- "0--*" gzMatchPlugin : Contains
+
+class gazebo {}
+
+gazebo --|> ISystemPostUpdate
+gazebo --|> ISystemConfigure
+
+class PanelAction extends GameAction{
+	- panelModelNames : List<String>
+	- panelModels: List<Entity>
+	- minAngleBlue: float
+	- minAngleYellow: float
+	- minAngleBlueYellow: float
+	- maxAngleBlueYellow: float
+	+ PanelAction(): PanelAction
+	+ PanelAction(Team : team1, Team : team2): PanelAction
+	+ updateAction(): void
+	+ getScores(): void
+	- getPanelState(panel : Entity): tuple<bool, bool>)
+	- getPanelAngle(panel : Entity): float
+}
+
+class PlantAction extends GameAction{
+	- plantModelNames : List<String>
+	- plantModels: List<Entity>
+	- zones : List<List<tuple<float, float>>>
+	+ PlantAction(): PlantAction
+	+ PlantAction(Team : team1, Team : team2): PlantAction
+	+ updateAction(): void
+	+ getScores(): void
+	- getPlantState(plant : Entity): tuple<bool, bool>
+	- getPlantPosition(plant : Entity): gz::math::Pose3d ? 
+}
+
+class robotNoGoZones extends GameAction{
+	- robotModelNames : List<String>
+	- robotModels: List<Entity>
+	- zones : List<List<tuple<float, float>>>
+	+ robotNoGoZones(): robotNoGoZones
+	+ robotNoGoZones(Team : team1, Team : team2): robotNoGoZones
+	+ updateAction(): void
+	+ getScores(): void
+	- getRobotState(robot : Entity): tuple<bool, bool>
+	- getRobotPosition(robot : Entity): gz::math::Pose3d ? 
+}
+
+
+@enduml
