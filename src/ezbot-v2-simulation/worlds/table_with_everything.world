@@ -45,7 +45,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone'>
+      <model name='SolarPanel_1'>
         <pose>2.03634 -2.4997199999999999 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -61,7 +61,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_0'>
+      <model name='SolarPanel_2'>
         <pose>2.0360299999999998 -2.2755899999999998 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -77,7 +77,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_1'>
+      <model name='SolarPanel_3'>
         <pose>2.0370499999999998 -1.7243299999999999 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -93,7 +93,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_2'>
+      <model name='SolarPanel_4'>
         <pose>2.0364300000000002 -1.50007 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -109,7 +109,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_3'>
+      <model name='SolarPanel_5'>
         <pose>2.03667 -1.2754000000000001 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -125,7 +125,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_4'>
+      <model name='SolarPanel_6'>
         <pose>2.0365500000000001 -0.72410699999999995 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -141,7 +141,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_5'>
+      <model name='SolarPanel_7'>
         <pose>2.0363699999999998 -0.49986399999999998 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -157,7 +157,7 @@
           <wrench>0 0 0 0 0 0</wrench>
         </link>
       </model>
-      <model name='SolarPanel_0_clone_6'>
+      <model name='SolarPanel_8'>
         <pose>2.0367899999999999 -0.27499400000000002 0.044631999999999998 0 0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='solar_panel'>
@@ -200,6 +200,10 @@
     </plugin>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+
+    <plugin name='gz::sim::systems::MyPlugin' filename='libgz-match-plugin.so'/>
+
+
     <model name='Table_2024'>
       <static>true</static>
       <link name='link_0'>
@@ -221,7 +225,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://Table2024/table2024.dae</uri>
+              <uri>model://Table2024/table2024.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -234,7 +238,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://Table2024/table2024.dae</uri>
+              <uri>model://Table2024/table2024.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -298,7 +302,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -338,7 +342,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -351,7 +355,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -436,13 +440,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone'>
+    <model name='SolarPanel_1'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -482,7 +486,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -495,7 +499,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -580,13 +584,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_0'>
+    <model name='SolarPanel_2'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -626,7 +630,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -639,7 +643,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -724,13 +728,13 @@
         <label>5</label>
       </plugin>      
     </model>
-    <model name='SolarPanel_0_clone_1'>
+    <model name='SolarPanel_3'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -770,7 +774,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -783,7 +787,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -868,13 +872,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_2'>
+    <model name='SolarPanel_4'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -914,7 +918,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -927,7 +931,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1012,13 +1016,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_3'>
+    <model name='SolarPanel_5'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1058,7 +1062,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1071,7 +1075,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1156,13 +1160,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_4'>
+    <model name='SolarPanel_6'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1202,7 +1206,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1215,7 +1219,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1300,13 +1304,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_5'>
+    <model name='SolarPanel_7'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1346,7 +1350,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1359,7 +1363,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1444,13 +1448,13 @@
         <label>5</label>
       </plugin>
     </model>
-    <model name='SolarPanel_0_clone_6'>
+    <model name='SolarPanel_8'>
       <link name='solar_panel_base_link'>
         <gravity>false</gravity>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/supportSolarPanel.dae</uri>
+              <uri>model://SolarPanel/supportSolarPanel.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1490,7 +1494,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1503,7 +1507,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///ezbot-v2/simulation/worlds/model://SolarPanel/solarPanelTextured.dae</uri>
+              <uri>model://SolarPanel/solarPanelTextured.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1609,7 +1613,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -1685,7 +1689,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -1761,7 +1765,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -1837,7 +1841,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -1913,7 +1917,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -1989,7 +1993,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2065,7 +2069,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2141,7 +2145,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2217,7 +2221,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2293,7 +2297,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2369,7 +2373,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2445,7 +2449,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2521,7 +2525,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2597,7 +2601,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2673,7 +2677,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2749,7 +2753,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2825,7 +2829,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2901,7 +2905,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -2977,7 +2981,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3053,7 +3057,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3129,7 +3133,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3205,7 +3209,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3281,7 +3285,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3357,7 +3361,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3433,7 +3437,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3509,7 +3513,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3585,7 +3589,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3661,7 +3665,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3737,7 +3741,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3813,7 +3817,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3889,7 +3893,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -3965,7 +3969,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -4041,7 +4045,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -4117,7 +4121,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -4193,7 +4197,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -4269,7 +4273,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///root/.gz/models/Plants/plant_white.dae</uri>
+              <uri>model://Plants/plant_white.dae</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
