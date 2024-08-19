@@ -4,3 +4,4 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rosdep update
 
+ENV GZ_SIM_RESOURCE_PATH="/ezbot-v2/install/ezbot-v2-simulation/share/ezbot-v2-simulation/models:/ezbot-v2/install/ezbot-v2/share/ezbot-v2/models"
