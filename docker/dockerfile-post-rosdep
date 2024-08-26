@@ -7,3 +7,5 @@ WORKDIR /ezBotV2-git
 RUN apt-get update && \
 		apt-get upgrade -y && \
 		rosdep update && rosdep install --from-paths src --ignore-src -r -y
+
+RUN echo 'export PS1="🤖🐋:\[\033[01;34m\]\w\[\033[00m\]>"' >> ~/.bashrc
