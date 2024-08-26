@@ -7,8 +7,10 @@
 #include <gz/sim/System.hh>
 #include <gz/plugin/Register.hh>
 
+#include "gz_match_plugin/team.hpp"
 
-
+#include "gz_match_plugin/game_action.hpp"
+#include "gz_match_plugin/action_zones.hpp"
 
 using namespace gz;
 using namespace sim;
@@ -30,6 +32,11 @@ class MyPlugin
   {
     // Create model object to access convenient functions
     world = World(_entity);
+
+    action.setWorld(world);
+    action.updateStart();
+
+
   }
  
   // Implement PostUpdate callback, provided by ISystemPostUpdate
@@ -37,6 +44,8 @@ class MyPlugin
   virtual void PostUpdate(const UpdateInfo &/*_info*/,
                           const EntityComponentManager &_ecm) override
   {
+    //action.updateStart();
+
     
 		    // Get model entity
     Entity modelEntity = world.ModelByName(_ecm, "SolarPanel_0");
@@ -55,14 +64,19 @@ class MyPlugin
       std::cerr << "Link 'solar_panel' not found" << std::endl;
       return;
     }
+
+    action.update(world, _ecm);
 		
-		std::cout << worldPose(this->linkEntity, _ecm) << std::endl;
-		std::cout << "Number of models : " << world.ModelCount(_ecm) << std::endl;
+		//std::cout << worldPose(this->linkEntity, _ecm) << std::endl;
+		//std::cout << "# of models : " << world.ModelCount(_ecm) << std::endl;
+
   }
  
   // ID of link entity
   private: Entity linkEntity;
 	private: World world;
+
+  private:ActionZones action = ActionZones();
 };
  
 // Register plugin

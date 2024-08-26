@@ -4,6 +4,18 @@ find_package(gz-cmake3 REQUIRED)
 
 project(gz-match-plugin)
 
+set(THIS_PACKAGE_INCLUDE_DEPENDS
+  gz-sim8
+  gz-plugin2
+  gz-math7
+  gz-msgs10
+)
+
+find_package(ament_cmake REQUIRED)
+foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
+  find_package(${Dependency} REQUIRED)
+endforeach()
+
 
 gz_find_package(gz-plugin2 REQUIRED COMPONENTS register)
 set(GZ_PLUGIN_VER ${gz-plugin2_VERSION_MAJOR})
@@ -28,8 +40,24 @@ gz_find_package(sdformat14 REQUIRED)
 add_library(
   gz-match-plugin
   SHARED
+  src/team.cpp
   src/gz_match_plugin.cpp
+  src/game_action.cpp
+  src/action_zones.cpp
 )
+
+
+ament_target_dependencies(
+  gz-match-plugin PUBLIC
+  ${THIS_PACKAGE_INCLUDE_DEPENDS}
+)
+
+
+#add_library(
+#  game-action
+#  SHARED
+#  src/game_action.cpp
+#)
 
 set_property(TARGET gz-match-plugin PROPERTY cxx_std_17)
 
