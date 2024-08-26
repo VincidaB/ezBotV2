@@ -16,12 +16,12 @@
 	<link name="${prefix}_wheel_link">
 	  <visual>
 		<geometry>
-		  <mesh filename="$(find ezbot-v2)/meshes/DAE/omni_wheel/omni_wheel.dae"/>
+		  <mesh filename="file://$(find ezbot-v2)/meshes/DAE/omni_wheel/omni_wheel.dae"/>
 		</geometry>
 	  </visual>
 	  <collision>
 		<geometry>
-		  <mesh filename="$(find ezbot-v2)/meshes/STL/omni_wheel/omni_wheel.stl"/>
+		  <mesh filename="file://$(find ezbot-v2)/meshes/STL/omni_wheel/omni_wheel.stl"/>
 		</geometry>
 	  </collision>
 	  <inertial>

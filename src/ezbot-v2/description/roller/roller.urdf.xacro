@@ -20,16 +20,15 @@
 	  
     <visual>
       <geometry>
-        <mesh filename="$(find ezbot-v2)/meshes/DAE/roller/roller.dae"/>
+        <mesh filename="file://$(find ezbot-v2)/meshes/DAE/roller/roller.dae"/>
       </geometry>
 	  </visual>
 	  
     <collision>
       <geometry>
-        <mesh filename="$(find ezbot-v2)/meshes/STL/roller/roller.stl"/>
+        <mesh filename="file://$(find ezbot-v2)/meshes/STL/roller/roller.stl"/>
       </geometry>
 	  </collision>
-
 	  <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="0.009"/>
