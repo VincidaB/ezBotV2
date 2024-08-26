@@ -14,7 +14,7 @@
     <joint name="camera1_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera1_link"/>
-        <origin xyz="0 -0.05 0.32" rpy="0 ${camera_downward_angle} -1.57"/>
+        <origin xyz="-0.05 0 0.32" rpy="0 ${camera_downward_angle} -3.141592"/>
     </joint>
 
     <link name="camera1_link">
@@ -84,7 +84,7 @@
     <joint name="camera2_base_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera2_base_rotated"/>
-        <origin xyz="0 0 0" rpy="0 0 ${2*pi/3}"/>
+        <origin xyz="0 0 0" rpy="0 0 ${pi/6}"/>
     </joint>
 
     <link name="camera2_base_rotated">
@@ -142,7 +142,7 @@
     <joint name="camera3_base_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera3_base_rotated"/>
-        <origin xyz="0 0 0" rpy="0 0 ${-2*pi/3}"/>
+        <origin xyz="0 0 0" rpy="0 0 ${-7*pi/6}"/>
     </joint>
 
     <link name="camera3_base_rotated">

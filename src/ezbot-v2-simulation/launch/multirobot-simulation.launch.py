@@ -166,19 +166,24 @@ def generate_launch_description():
     
     bridge = Node(package='ros_gz_bridge', executable='parameter_bridge',
                 arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-                           '/robot1/camera1@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot1/camera2@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot1/camera3@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot2/camera1@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot2/camera2@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot2/camera3@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot1/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
-                           '/robot2/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
-                           'robot1/lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
-                           '/robot1/camera3/colored_map@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot2/camera3/colored_map@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot1/camera3/labels_map@sensor_msgs/msg/Image@gz.msgs.Image',
-                           '/robot2/camera3/labels_map@sensor_msgs/msg/Image@gz.msgs.Image'
+                            '/robot1/camera1@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot1/camera2@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot1/camera3@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot2/camera1@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot2/camera2@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot2/camera3@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot1/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
+                            '/robot2/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
+                            'robot1/lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
+                            'robot2/lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
+                            '/robot1/camera3/colored_map@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot2/camera3/colored_map@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot1/camera3/labels_map@sensor_msgs/msg/Image@gz.msgs.Image',
+                            '/robot2/camera3/labels_map@sensor_msgs/msg/Image@gz.msgs.Image',
+                            'robot1/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
+                            'robot2/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
+
+
                             ],
                 output='screen')
 

@@ -4,7 +4,7 @@
     <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="base_laser"/>
-        <origin xyz="0.0 0 0.41" rpy="0 0 0"/>
+        <origin xyz="0.0 0 0.41" rpy="0 0 1.0471975512"/>
     </joint>
     <joint name="ldlidar_node" type="fixed">
         <parent link="base_laser"/>
@@ -29,20 +29,20 @@
     <link name="base_laser">
         <visual>
             <geometry>
-                <cylinder radius="0.02" length="0.04"/>
+                <cylinder radius="0.05" length="0.04"/>
             </geometry>
             <material name="black"/>
         </visual>
         <visual>
             <origin xyz="0 0 -0.05"/>
             <geometry>
-                <cylinder radius="0.01" length="0.1"/>
+                <cylinder radius="0.05" length="0.1"/>
             </geometry>
             <material name="black"/>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.02" length="0.04"/>
+                <cylinder radius="0.05" length="0.04"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
@@ -50,6 +50,7 @@
         </xacro:inertial_cylinder>
     </link>
 
+    <xacro:property name="noise" value="0.01"/>
 
 
     <gazebo reference="base_laser">
@@ -58,9 +59,8 @@
         <sensor name="gpu_lidar" type="gpu_lidar">
             <pose> 0 0 0 0 0 0 </pose>
             <topic>$(arg namespace)/lidar</topic>
-            <!--
             <gz_frame_id>$(arg namespace)/base_laser</gz_frame_id>
-            -->
+            
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <ray>
@@ -75,7 +75,17 @@
                     <min>0.05</min>
                     <max>12</max>
                 </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.01</mean>
+                    <stddev>0.01</stddev>
+                </noise>
             </ray>
+            <!-- Noise 
+            <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_lidar_gpu.so">
+                <gaussianNoise>${noise}</gaussianNoise>
+            </plugin>
+            -->
         </sensor>
     </gazebo>
 
