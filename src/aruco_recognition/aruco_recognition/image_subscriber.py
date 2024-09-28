@@ -28,17 +28,17 @@ class ImageSubscriber(Node):
         
         self.subscription1 = self.create_subscription(
             Image,
-            '/robot1/camera1',
+            '/robot1/camera1/img_raw',
             self.listener_callback,
             10)
         self.subscription2 = self.create_subscription(
             Image,
-            '/robot1/camera2',
+            '/robot1/camera2/img_raw',
             self.listener_callback1,
             10)
         self.subscription3 = self.create_subscription(
             Image,
-            '/robot1/camera3',
+            '/robot1/camera3/img_raw',
             self.listener_callback2,
             10)
         

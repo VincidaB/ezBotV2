@@ -3,11 +3,10 @@
 
 
     <xacro:property name="camera_downward_angle" value="0.8"/>
-    <xacro:property name="camera_horizontal_fov" value="2.0944"/>
+    <xacro:property name="camera_horizontal_fov" value="1.8906"/> <!--108 degrees-->
     <xacro:property name="camera_horizontal_pixels" value="1280"/>
     <xacro:property name="camera_vertical_pixels" value="720"/>
     <xacro:property name="camera_framerate" value="10"/>
-    
 
 
 
@@ -21,9 +20,9 @@
         <origin xyz="0 0 0" rpy="0 0 -1.57"/>
         <visual>
             <geometry>
-                <box size="0.010 0.03 0.03"/>
+                <box size="0.010 0.04 0.04"/>
             </geometry>
-            <material name="black"/>
+            <material name="grey"/>
         </visual>
     </link>
 
@@ -39,9 +38,10 @@
 
 
     <gazebo reference="camera1_link">
-        <material>Gazebo/Black</material>
+        <material>Gazebo/Grey</material>
 
         <sensor name="camera1" type="camera">
+            <topic>$(arg namespace)/camera1/img_raw</topic>
             <visualize>1</visualize>
             <camera>
             <horizontal_fov>${camera_horizontal_fov}</horizontal_fov> <!--120 degrees-->
@@ -76,7 +76,6 @@
             </camera>
             <always_on>1</always_on>
             <update_rate>${camera_framerate}</update_rate>
-            <topic>$(arg namespace)/camera1</topic>
         </sensor>
     </gazebo>
 
@@ -100,9 +99,9 @@
         <origin xyz="0 0 0" rpy="0 0 -1.57"/>
         <visual>
             <geometry>
-                <box size="0.010 0.03 0.03"/>
+                <box size="0.010 0.04 0.04"/>
             </geometry>
-            <material name="black"/>
+            <material name="grey"/>
         </visual>
     </link>
 
@@ -118,7 +117,7 @@
 
 
     <gazebo reference="camera2_link">
-        <material>Gazebo/Black</material>
+        <material>Gazebo/Grey</material>
 
         <sensor name="camera2" type="camera">
             <visualize>1</visualize>
@@ -135,7 +134,7 @@
             </camera>
             <always_on>1</always_on>
             <update_rate>${camera_framerate}</update_rate>
-            <topic>$(arg namespace)/camera2</topic>
+            <topic>$(arg namespace)/camera2/img_raw</topic>
         </sensor>
     </gazebo>
 
@@ -158,9 +157,9 @@
         <origin xyz="0 0 0" rpy="0 0 -1.57"/>
         <visual>
             <geometry>
-                <box size="0.010 0.03 0.03"/>
+                <box size="0.010 0.04 0.04"/>
             </geometry>
-            <material name="black"/>
+            <material name="grey"/>
         </visual>
     </link>
 
@@ -176,6 +175,7 @@
 
 
     <gazebo reference="camera3_link">
+        <material>Gazebo/Grey</material>
 
         
         <sensor name="camera3" type="camera">
@@ -193,11 +193,11 @@
             </camera>
             <always_on>1</always_on>
             <update_rate>${camera_framerate}</update_rate>
-            <topic>$(arg namespace)/camera3</topic>
+            <topic>$(arg namespace)/camera3/img_raw</topic>
         </sensor>
         
         <sensor name="segmentation_camera" type="segmentation">
-        <topic>$(arg namespace)/camera3</topic>
+        <topic>$(arg namespace)/camera3_segm</topic>
         <camera>
             <segmentation_type>instance</segmentation_type>
             <horizontal_fov>${camera_horizontal_fov}</horizontal_fov> 

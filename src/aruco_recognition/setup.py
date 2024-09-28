@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'image_subscriber = aruco_recognition.image_subscriber:main',
+            'feature_matching.py = aruco_recognition.feature_matching:main',
         ],
     },
 )
