@@ -13,17 +13,29 @@ from launch_ros.actions import Node
 
 rand_half_range = 0.00
 
+# Old positions
+# positions_yellow_list = [
+#     [1.7, -0.3],
+#     [1.7, -0.3],
+#     [1.0, -2.8]
+# ]
+# 
+# positions_blue_list = [
+#     [1.0, -0.3],
+#     [0.3, -2.8],
+#     [1.7, -2.8]
+# ]
 
 positions_yellow_list = [
-    [1.7, -0.3],
-    [1.7, -0.3],
-    [1.0, -2.8]
+    [-1.5+0.45/2, -1+0.45/2],
+    [1.5-0.45/2, -0.225],
+    [-1.17, 1-0.45/2],
 ]
 
 positions_blue_list = [
-    [1.0, -0.3],
-    [0.3, -2.8],
-    [1.7, -2.8]
+    [1.5-0.45/2, -1+0.45/2],
+    [-1.5+0.45/2, -0.225],
+    [1.17, 1-0.45/2],
 ]
 
 def spawn_yellow_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2 : LaunchConfiguration, arg3 : LaunchConfiguration):
@@ -129,7 +141,8 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot2','color' : 'blue'}.items()
     )
     
-    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
+    #world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
+    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_with_cans.sdf')
 
     gz_server_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -137,7 +150,7 @@ def generate_launch_description():
         ),
         #launch_arguments={'gz_args': ['-r -v4', world], 'on_exit_shutdown': 'true'}.items()
         #launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '-r -v4 --render-engine ogre --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gui.config.xml')], 'on_exit_shutdown': 'true'}.items()
-        launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '-r -v4 --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gui.config.xml')], 'on_exit_shutdown': 'true'}.items()
+        launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '-r -v4 --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_sim_new.config')], 'on_exit_shutdown': 'true'}.items()
     )
    
     load_joint_state_broadcaster1 = ExecuteProcess(

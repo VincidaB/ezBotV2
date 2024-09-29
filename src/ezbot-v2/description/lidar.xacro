@@ -61,6 +61,7 @@
             <topic>$(arg namespace)/lidar</topic>
             <gz_frame_id>$(arg namespace)/base_laser</gz_frame_id>
             
+            
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <ray>
