@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
-  <model name='Can'>
+  <model name='Plank'>
    	<static>false</static>
 
     <link name='link_0'>
@@ -21,11 +21,16 @@
       <visual name='visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>can.dae</uri>
-            <scale>1.0 1.0 1.0</scale>
-          </mesh>
+          <box>
+        <size>0.4 0.1 0.015</size>
+          </box>
         </geometry>
+        <material>
+          <ambient>0.6 0.4 0.2 1</ambient>
+          <diffuse>0.6 0.4 0.2 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
       </visual>
@@ -33,12 +38,11 @@
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>3</max_contacts>
-        <pose>0 0 0.0545 0 -0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
-          <cylinder>
-            <radius>0.0365</radius>
-            <length>0.109</length>
-          </cylinder>
+          <box>
+            <size>0.4 0.1 0.015</size>
+          </box>
         </geometry>
         <surface>
           <friction>

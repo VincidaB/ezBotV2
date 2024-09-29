@@ -36,6 +36,14 @@
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
+        <!-- doesn't improve performance that much
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>1 1</size>
+          </plane>
+        </geometry>
+        -->
         <surface>
           <friction>
             <ode>
