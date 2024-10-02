@@ -12,7 +12,7 @@ For the simulation, the following dependencies need to be installed :
 
 ![Table 2025](images/TableNoRobot.png)
 
-[Docker](https://docs.docker.com/engine/install/) and `nvidia-container-toolkit` are supposed to be installed on the host machine.
+[Docker](https://docs.docker.com/engine/install/) and [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) are supposed to be installed on the host machine.
 
 Clone the repository and build the docker image :
 ```bash
