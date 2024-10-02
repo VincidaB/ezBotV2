@@ -2,6 +2,8 @@ FROM osrf/ros:jazzy-desktop-full
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    rosdep update
+    rosdep update 
+RUN apt-get install cppzmq-dev/noble 
+# the cppzmq-dev is a package that is currently required for the point counting gazebo plugin
 
 ENV GZ_SIM_RESOURCE_PATH="/ezbot-v2/install/ezbot-v2-simulation/share/ezbot-v2-simulation/models:/ezbot-v2/install/ezbot-v2/share/ezbot-v2/models"

@@ -1,6 +1,6 @@
 FROM ezbot-dev-pre-rosdep:latest
 
-RUN git clone https://github.com/VincidaB/ezBotV2.git /ezBotV2-git
+RUN git clone https://github.com/VincidaB/ezBotV2.git /ezBotV2-git --depth 1
 # COPY . /ezBotV2-git
 WORKDIR /ezBotV2-git
 
