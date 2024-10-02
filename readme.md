@@ -8,8 +8,11 @@ For the CAD design, see [insert catia repository]
 For the simulation, the following dependencies need to be installed :
 `nvidia-container-toolkit`
 
-# To run the simulation
+# Running the simulation
 
+![Table 2025](images/TableNoRobot.png)
+
+Clone the repository and build the docker image :
 ```bash
 git clone https://github.com/VincidaB/ezBotV2.git
 cd ezBotV2
@@ -18,7 +21,7 @@ xhost +local:*
 ./docker/run.sh
 ```
 
-In the container : 
+Inside of the container : 
 
 ```bash
 colcon build --symlink-install
