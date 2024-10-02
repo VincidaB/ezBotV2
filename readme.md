@@ -16,7 +16,6 @@ For the simulation, the following dependencies need to be installed :
 
 Clone the repository and build the docker image :
 ```bash
-xhost +local:* 
 git clone https://github.com/VincidaB/ezBotV2.git
 cd ezBotV2
 ./docker/build-all.sh
