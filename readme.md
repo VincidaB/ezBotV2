@@ -12,12 +12,14 @@ For the simulation, the following dependencies need to be installed :
 
 ![Table 2025](images/TableNoRobot.png)
 
+[Docker](https://docs.docker.com/engine/install/) and `nvidia-container-toolkit` are supposed to be installed on the host machine.
+
 Clone the repository and build the docker image :
 ```bash
+xhost +local:* 
 git clone https://github.com/VincidaB/ezBotV2.git
 cd ezBotV2
 ./docker/build-all.sh
-xhost +local:* 
 ./docker/run.sh
 ```
 
@@ -28,5 +30,10 @@ colcon build --symlink-install
 source install/setup.bash
 ros2 launch ezbot-v2-simulation multirobot-simulation.launch.py
 ```
+or for a single robot simulation :
+```bash
+ros2 launch ezbot-v2-simluation simulation.launch.py
+```
 
-> **&#9432;** for systems with low RAM (<16Gb), it is recommended to compile using `colcon build --symlink-install --executor sequential` to avoid running out of memory.
+
+> **Note &#9432; :** for systems with low RAM (<16Gb), it is recommended to compile using `colcon build --symlink-install --executor sequential` to avoid running out of memory.
