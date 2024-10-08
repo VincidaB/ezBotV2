@@ -22,7 +22,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>can.dae</uri>
+            <uri>canv2.dae</uri>
             <scale>1.0 1.0 1.0</scale>
           </mesh>
         </geometry>
@@ -46,15 +46,6 @@
               <mu>0.9</mu>
               <mu2>0.9</mu2>
             </ode>
-            <torsional>
-              <coefficient>1</coefficient>
-              <patch_radius>0</patch_radius>
-              <surface_radius>0</surface_radius>
-              <use_patch_radius>1</use_patch_radius>
-              <ode>
-                <slip>0</slip>
-              </ode>
-            </torsional>
           </friction>
 
           <contact>
@@ -63,8 +54,8 @@
               <soft_erp>0.2</soft_erp>
               <kp>1e1</kp>
               <kd>1e9</kd>
-              <max_vel>0</max_vel>
-              <min_depth>0.01</min_depth>
+              <max_vel>0.01</max_vel>
+              <min_depth>0.001</min_depth>
             </ode>
           </contact>
         </surface>
