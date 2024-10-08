@@ -1,5 +1,7 @@
 #/bin/bash
 
+xhost +local:*
+
 #docker run -it --rm -v $(pwd):/ezbot-v2 -w /ezbot-v2 -e "TERM=xterm-256color" ros:jazzy-ros-base /bin/bash
 #docker run -it --rm -v $(pwd):/ezbot-v2 -w /ezbot-v2 -e "TERM=xterm-256color" osrf/ros:jazzy-desktop-full /bin/bash
 #docker run -it --rm --rm --net=host --gpus=all -e DISPLAY=$DISPLAY -v $(pwd):/ezbot-v2 -w /ezbot-v2 -e "TERM=xterm-256color" rosdep_done /bin/bash
