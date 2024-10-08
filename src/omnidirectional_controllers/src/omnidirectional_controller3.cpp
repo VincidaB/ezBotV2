@@ -327,6 +327,16 @@ CallbackReturn OmnidirectionalController3::on_configure(
       tf_prefix = tf_prefix + "/";
     }
   }
+  
+  // for robot_localization, leading slashes in tf frames cause problem
+  // remove leading slash from tf_prefix if there is one
+
+  if (tf_prefix.size() > 0 && tf_prefix[0] == '/')
+  {
+    tf_prefix = tf_prefix.substr(1);
+  }
+
+  
 
   odom_params_.odom_frame_id = tf_prefix + odom_params_.odom_frame_id;
   odom_params_.base_frame_id = tf_prefix + odom_params_.base_frame_id;
