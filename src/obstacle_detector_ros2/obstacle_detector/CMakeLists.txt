@@ -20,15 +20,6 @@ find_package(Armadillo REQUIRED)
 find_package(Boost 1.54.0 REQUIRED system)
 ament_auto_find_build_dependencies()
 
-set(TARGET scans_merger)
-ament_auto_add_library(${TARGET} SHARED
-  src/${TARGET}.cpp
-)
-target_link_libraries(${TARGET} ${ARMADILLO_LIBRARIES})
-rclcpp_components_register_node(${TARGET}
-  PLUGIN "obstacle_detector::ScansMerger"
-  EXECUTABLE ${TARGET}_node
-)
 
 set(TARGET obstacle_extractor)
 ament_auto_add_library(${TARGET} SHARED
