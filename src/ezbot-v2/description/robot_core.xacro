@@ -225,9 +225,12 @@
           <material name="red"/>
       </visual>
       <collision>
-          <origin xyz="0 0 0" rpy="0 0 ${-M_PI/2}"/>
-          <geometry>
+          <origin xyz="0 0 0.16" rpy="0 0 ${-M_PI/2}"/>
+           <geometry>
+              <box size="0.2 0.2 0.3"/>
+          <!--
             <mesh filename="file://$(find ezbot-v2)/models/ezbotv2/ezbotv2.dae" scale="0.001 0.001 0.001" />
+          -->
           </geometry>
       </collision>
       <inertial>

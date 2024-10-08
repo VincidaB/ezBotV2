@@ -78,8 +78,8 @@
                 </range>
                 <noise>
                     <type>gaussian</type>
-                    <mean>0.01</mean>
-                    <stddev>0.01</stddev>
+                    <mean>0.001</mean>
+                    <stddev>0.001</stddev>
                 </noise>
             </ray>
             <!-- Noise 

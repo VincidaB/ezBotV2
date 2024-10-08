@@ -50,7 +50,7 @@
             </image>
             <clip>
                 <near>0.1</near>
-                <far>100</far>
+                <far>10</far>
             </clip>
             <!--
             <distortion>
@@ -127,7 +127,7 @@
             </image>
             <clip>
                 <near>0.1</near>
-                <far>100</far>
+                <far>10</far>
             </clip>
             </camera>
             <always_on>1</always_on>
@@ -192,7 +192,7 @@
             <update_rate>${camera_framerate}</update_rate>
             <topic>$(arg namespace)/camera3/img_raw</topic>
         </sensor>
-        
+        <!--
         <sensor name="segmentation_camera" type="segmentation">
         <topic>$(arg namespace)/camera3_segm</topic>
         <camera>
@@ -204,13 +204,14 @@
             </image>
             <clip>
             <near>0.1</near>
-            <far>100</far>
+            <far>10</far>
             </clip>
         </camera>
         <always_on>1</always_on>
         <update_rate>${camera_framerate}</update_rate>
         <visualize>true</visualize>
         </sensor>
+        -->
     </gazebo>
 
 </robot>

@@ -13,7 +13,7 @@
     <!--
       Setting friction too high (1.0 tested) result in weird movement and behavior 
     -->
-    <dynamics damping="0.0" friction="0.01"/>
+    <dynamics damping="0.5" friction="0.01"/>
 	</joint>
 
 	<link name="${prefix}_roller_link">
