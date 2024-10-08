@@ -5,7 +5,7 @@ import random
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription, LaunchContext
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, ExecuteProcess, OpaqueFunction
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, ExecuteProcess, OpaqueFunction, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
@@ -53,7 +53,7 @@ def spawn_yellow_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2
                                    '-entity', 'EzBot',
                                    '-x', x_pos,
                                    '-y', y_pos,
-                                   '-z', '0.1',
+                                   '-z', '0.05',
                                     '--namespace', 'robot1' ,
                                     '--name', 'yellow_robot'],
                         output='screen')
@@ -75,7 +75,7 @@ def spawn_blue_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2 :
                                    '-entity', 'EzBot2',
                                    '-x', x_pos, 
                                    '-y', y_pos,
-                                   '-z', '0.1' ,
+                                   '-z', '0.05' ,
                                     '--namespace', 'robot2',
                                     '--name', 'blue_robot'],
                         output='screen')
@@ -142,7 +142,7 @@ def generate_launch_description():
     )
     
     #world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
-    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_with_cans_planks.sdf')
+    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_poteaux.sdf')
 
     gz_server_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -176,6 +176,14 @@ def generate_launch_description():
         output='screen'
     )    
 
+
+    delayed_controllers = TimerAction(
+        actions = [load_joint_state_broadcaster1,
+                   load_omnidirectional_controller1,
+                   load_joint_state_broadcaster2,
+                   load_omnidirectional_controller2],
+        period=5.0,
+    )
     
     bridge = Node(package='ros_gz_bridge', executable='parameter_bridge',
                 arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
@@ -211,10 +219,7 @@ def generate_launch_description():
         gz_server_cmd,
         OpaqueFunction(function=spawn_yellow_robot, args=[use_random_start, yellow_x, yellow_y]),
         OpaqueFunction(function=spawn_blue_robot, args=[use_random_start, blue_x, blue_y]),
-        load_joint_state_broadcaster1,
-        load_omnidirectional_controller1,
-        load_joint_state_broadcaster2,
-        load_omnidirectional_controller2,
+        delayed_controllers,
         sim_time_arg,
         yellow_x_arg,
         yellow_y_arg,
