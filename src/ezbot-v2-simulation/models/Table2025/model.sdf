@@ -2,6 +2,9 @@
 <sdf version='1.7'>
   <model name='Table_2024'>
    	<static>true</static>
+    <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>1</label>
+    </plugin>
     <link name='link_0'>
 			<gravity>0</gravity>
       <inertial>

@@ -3,6 +3,9 @@
   <model name='Plank'>
    	<static>false</static>
     <allow_auto_disable>true</allow_auto_disable>
+    <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>10</label>
+    </plugin>
     <link name='link_0'>
 			<gravity>1</gravity>
       <inertial>

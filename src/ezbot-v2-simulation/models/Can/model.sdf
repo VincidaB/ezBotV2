@@ -2,7 +2,9 @@
 <sdf version='1.7'>
   <model name='Can'>
    	<static>false</static>
-
+    <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>11</label>
+    </plugin>
     <link name='link_0'>
 			<gravity>1</gravity>
       <inertial>
