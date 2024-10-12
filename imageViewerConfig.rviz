@@ -6,12 +6,11 @@ Panels:
       Expanded:
         - /RobotModel1/Description Topic1
         - /TF1/Frames1
-        - /Image2/Topic1
         - /Image3/Topic1
         - /Odometry2/Shape1
         - /Odometry3/Shape1
       Splitter Ratio: 0.5
-    Tree Height: 699
+    Tree Height: 217
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -29,7 +28,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -118,8 +117,6 @@ Visualization Manager:
           Value: true
         robot1/ldlidar_link:
           Value: true
-        robot1/odom:
-          Value: true
         robot1/second_wheel_link:
           Value: true
         robot1/third_wheel_link:
@@ -168,37 +165,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        robot1/odom:
-          robot1/base_link:
-            robot1/base_footprint:
-              {}
-            robot1/chassis:
-              robot1/aruco:
-                {}
-              robot1/base_laser:
-                robot1/ldlidar_base:
-                  {}
-                robot1/ldlidar_link:
-                  {}
-              robot1/camera1_link:
-                robot1/camera1_link_optical:
-                  {}
-              robot1/camera2_base_rotated:
-                robot1/camera2_link:
-                  robot1/camera2_link_optical:
-                    {}
-              robot1/camera3_base_rotated:
-                robot1/camera3_link:
-                  robot1/camera3_link_optical:
-                    {}
-              robot1/imu:
-                {}
-            robot1/first_wheel_link:
-              {}
-            robot1/second_wheel_link:
-              {}
-            robot1/third_wheel_link:
-              {}
+        {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Image
@@ -571,7 +538,7 @@ Visualization Manager:
       Enabled: true
       Name: AllObstacles
       Namespaces:
-        obstacles: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -584,7 +551,7 @@ Visualization Manager:
       Enabled: true
       Name: AllLines
       Namespaces:
-        lineobstacles: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -597,7 +564,7 @@ Visualization Manager:
       Enabled: true
       Name: Poteaux
       Namespaces:
-        poteaux: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -723,6 +690,48 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /odometry/filtered
       Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/camera1_segm/colored_map
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/camera2_segm/colored_map
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/camera3_segm/colored_map
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -768,7 +777,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.040000028908252716
+      Angle: -0.035000029951334
       Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -792,7 +801,7 @@ Window Geometry:
   Hide Right Dock: true
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd000000040000000000000177000002f8fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000023c000002f8000000cb00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000004b2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003e000004b2000000a500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000a0000000220fc0100000005fb0000000a0049006d0061006700650100000000000003380000005d00fffffffb0000000a0049006d006100670065010000033e000003620000005d00fffffffb0000000a0049006d00610067006501000006a60000035a0000005d00fffffffb0000000a0049006d006100670065000000078b000002750000000000000000fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000a000000003efc0100000002fb0000000800540069006d0065000000000000000a000000027900fffffffb0000000800540069006d0065010000000000000450000000000000000000000883000002f800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000004d200000116fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000022c00000116000000cb00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000004b2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003e000004b2000000a500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000a0000000210fc0100000005fb0000000a0049006d00610067006501000000000000033f0000005d00fffffffb0000000a0049006d0061006700650100000345000003590000005d00fffffffb0000000a0049006d00610067006501000006a40000035c0000005d00fffffffb0000000a0049006d006100670065000000078b000002750000000000000000fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000a00000001ecfc0100000005fb0000000a0049006d00610067006501000000000000034e0000005d00fffffffb0000000a0049006d0061006700650100000354000003540000005d00fffffffb0000000a0049006d00610067006501000006ae000003520000005d00fffffffb0000000800540069006d0065000000000000000a000000027900fffffffb0000000800540069006d00650100000000000004500000000000000000000005280000011600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
