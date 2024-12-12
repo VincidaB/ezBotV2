@@ -141,7 +141,6 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'true', 'namespace' : 'robot2','color' : 'blue'}.items()
     )
     
-    #world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
     world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_poteaux.sdf')
 
     gz_server_cmd = IncludeLaunchDescription(
@@ -216,6 +215,21 @@ def generate_launch_description():
                             '/robot2/camera1/camera_info@sensor_msgs/CameraInfo[gz.msgs.CameraInfo',
                             ],
                 output='screen')
+    
+    obstacle_detector = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('obstacle_detector'), 'launch', 'demo.launch.py')
+        ),
+        launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+    ekf1 = Node(package='robot_localization', 
+                executable='ekf_node',
+                parameters=[os.path.join(get_package_share_directory('ezbot-v2'), 'config', 'localization.yaml')],
+                #namespace='robot1', 
+                output='screen'
+    )
+
 
 
 
@@ -229,6 +243,8 @@ def generate_launch_description():
         OpaqueFunction(function=spawn_blue_robot, args=[use_random_start, blue_x, blue_y]),
         delayed_controllers,
         sim_time_arg,
+        obstacle_detector,
+        ekf1,
         yellow_x_arg,
         yellow_y_arg,
         bridge,
