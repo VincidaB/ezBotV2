@@ -29,6 +29,9 @@ colcon build --symlink-install
 source install/setup.bash
 ros2 launch ezbot-v2-simulation multirobot-simulation.launch.py
 ```
+
+![MultiRobot](images/TableWithRobots.png)
+
 or for a single robot simulation :
 ```bash
 ros2 launch ezbot-v2-simluation simulation.launch.py
@@ -36,3 +39,14 @@ ros2 launch ezbot-v2-simluation simulation.launch.py
 
 
 > **Note &#9432; :** for systems with low RAM (<16Gb), it is recommended to compile using `colcon build --symlink-install --executor sequential` to avoid running out of memory.
+
+
+Launching nav2 : 
+```bash
+ros2 launch ezbot-v2 nav2.bringup.launch.py use_sim_time:=true params_file:=src/ezbot-v2/config/nav2_params.yaml map:=src/ezbot-v2/maps/testMap/testMap.yaml
+```
+
+Need to add static publisher for the map : 
+```bash
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 robot1/map robot1/odom
+```
