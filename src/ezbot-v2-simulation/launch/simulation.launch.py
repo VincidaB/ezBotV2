@@ -62,7 +62,7 @@ def spawn_blue_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2 :
                                    '-entity', 'EzBot2',
                                    '-x', x_pos, 
                                    '-y', y_pos,
-                                   '-z', '0.1' ,
+                                   '-z', '0.05' ,
                                     '--namespace', 'robot2',
                                     '--name', 'blue_robot'],
                         output='screen')
@@ -124,15 +124,15 @@ def generate_launch_description():
     )
     
     #world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'table_with_everything.world')
-    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_with_cans_planks.sdf')
+    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2025_poteaux.sdf')
 
     gz_server_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')
         ),
         #launch_arguments={'gz_args': ['-r -v4', world], 'on_exit_shutdown': 'true'}.items()
-        #launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '-r -v4 --render-engine ogre --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gui.config.xml')], 'on_exit_shutdown': 'true'}.items()
-        launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '-r -v4 --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_sim_new.config')], 'on_exit_shutdown': 'true'}.items()
+        #launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '--physics-engine gz-physics-bullet-featherstone-plugin -r -v4 --render-engine ogre --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gui.config.xml')], 'on_exit_shutdown': 'true'}.items()
+        launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '--record -r -v4 --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_sim_new.config')], 'on_exit_shutdown': 'true'}.items()
     )
    
     load_joint_state_broadcaster1 = ExecuteProcess(
