@@ -6,7 +6,7 @@ find_package(ament_cmake REQUIRED)
 
 
 install(
-    DIRECTORY launch description meshes config models
+    DIRECTORY launch description meshes config models maps
     DESTINATION share/${PROJECT_NAME}
 )
 
