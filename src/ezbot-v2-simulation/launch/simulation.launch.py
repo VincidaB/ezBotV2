@@ -19,12 +19,6 @@ positions_yellow_list = [
     [-1.17, 1-0.45/2],
 ]
 
-positions_blue_list = [
-    [1.5-0.45/2, -1+0.45/2],
-    [-1.5+0.45/2, -0.225],
-    [1.17, 1-0.45/2],
-]
-
 def spawn_yellow_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2 : LaunchConfiguration, arg3 : LaunchConfiguration):
     # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
     if context.perform_substitution(arg1) == 'True':
@@ -47,31 +41,7 @@ def spawn_yellow_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2
     return [spawn_entity]
 
 
-def spawn_blue_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2 : LaunchConfiguration, arg3 : LaunchConfiguration):
-    # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
-    if context.perform_substitution(arg1) == 'True':
-        i = random.randint(0, len(positions_blue_list) - 1)
-        x_pos = str(positions_blue_list[i][0] + random.uniform(-rand_half_range, rand_half_range))
-        y_pos = str(positions_blue_list[i][1] + random.uniform(-rand_half_range, rand_half_range))
-    else:
-        x_pos = str(float(context.perform_substitution(arg2)) + random.uniform(-rand_half_range, rand_half_range))
-        y_pos = str(float(context.perform_substitution(arg3)) + random.uniform(-rand_half_range, rand_half_range))
-    
-    spawn_entity = Node(package='ros_gz_sim', executable='create',
-                        arguments=['-topic', 'robot2/robot_description',
-                                   '-entity', 'EzBot2',
-                                   '-x', x_pos, 
-                                   '-y', y_pos,
-                                   '-z', '0.05' ,
-                                    '--namespace', 'robot2',
-                                    '--name', 'blue_robot'],
-                        output='screen')
-    return [spawn_entity]
-
 def generate_launch_description():
-
-
-
 
     robot_package_name='ezbot-v2'
     simulation_package_name='ezbot-v2-simulation' 
@@ -95,9 +65,6 @@ def generate_launch_description():
             default_value=yellow_y,
             description='Position number from 0 to X for team yellow\'srobot'
     )
-
-    blue_x = LaunchConfiguration('blue_x', default=1.0)
-    blue_y = LaunchConfiguration('blue_y', default=0)
 
     DeclareLaunchArgument(
             'blue_x',
@@ -130,8 +97,6 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')
         ),
-        #launch_arguments={'gz_args': ['-r -v4', world], 'on_exit_shutdown': 'true'}.items()
-        #launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '--physics-engine gz-physics-bullet-featherstone-plugin -r -v4 --render-engine ogre --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gui.config.xml')], 'on_exit_shutdown': 'true'}.items()
         launch_arguments={'gz_args': [' ', ' ' ,world, ' ', '--record -r -v4 --seed 42 --gui-config ' , os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_sim_new.config')], 'on_exit_shutdown': 'true'}.items()
     )
    
@@ -145,19 +110,7 @@ def generate_launch_description():
         cmd=['ros2', 'control', 'load_controller', '-c', '/robot1/controller_manager',
              '--set-state', 'active', 'omnidirectional_controller'],
         output='screen'
-    )    
-    load_joint_state_broadcaster2 = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller','-c', '/robot2/controller_manager', '--set-state', 'active',
-             'joint_state_broadcaster'],
-        output='screen'
     )
-
-    load_omnidirectional_controller2 = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '-c', '/robot2/controller_manager',
-             '--set-state', 'active', 'omnidirectional_controller'],
-        output='screen'
-    )    
-
     
     bridge = Node(package='ros_gz_bridge', executable='parameter_bridge',
                 arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
@@ -181,7 +134,6 @@ def generate_launch_description():
         rsp1,
         gz_server_cmd,
         OpaqueFunction(function=spawn_yellow_robot, args=[use_random_start, yellow_x, yellow_y]),
-        # OpaqueFunction(function=spawn_blue_robot, args=[use_random_start, blue_x, blue_y]),
         load_joint_state_broadcaster1,
         load_omnidirectional_controller1,
         sim_time_arg,
