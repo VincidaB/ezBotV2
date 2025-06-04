@@ -133,7 +133,8 @@ void PositionEstimator::processObstacles(){
     }
   }
 
-  RCLCPP_INFO(this->get_logger(), "Poteau3: %f, %f, %f", poteau3.center.x, poteau3.center.y, poteau3.radius);
+  if (debug_)
+    RCLCPP_INFO(this->get_logger(), "Poteau3: %f, %f, %f", poteau3.center.x, poteau3.center.y, poteau3.radius);
 
   // order poteau 1 and 2, so that poteau 1,2,3 is in a trigo order
   if (poteau1.center.cross(poteau2.center) < 0){
@@ -152,10 +153,10 @@ void PositionEstimator::processObstacles(){
 
   double dist1, dist2, dist3;
   // based on 1st and 2nd poteau
-
-  RCLCPP_INFO(this->get_logger(), "Poteau1: %f, %f, %f", poteau1.center.x, poteau1.center.y, poteau1.radius);
-  RCLCPP_INFO(this->get_logger(), "Poteau2: %f, %f, %f", poteau2.center.x, poteau2.center.y, poteau2.radius);
-
+  if (debug_){
+    RCLCPP_INFO(this->get_logger(), "Poteau1: %f, %f, %f", poteau1.center.x, poteau1.center.y, poteau1.radius);
+    RCLCPP_INFO(this->get_logger(), "Poteau2: %f, %f, %f", poteau2.center.x, poteau2.center.y, poteau2.radius);
+  }
   dist1 = poteau1.center.x*poteau1.center.x + poteau1.center.y*poteau1.center.y;
   dist2 = poteau2.center.x*poteau2.center.x + poteau2.center.y*poteau2.center.y;
   dist3 = poteau3.center.x*poteau3.center.x + poteau3.center.y*poteau3.center.y;
@@ -184,12 +185,13 @@ void PositionEstimator::processObstacles(){
   y2 = (C*D - A*F)/(B*D - A*E);
 
 
-
-  RCLCPP_INFO(this->get_logger(), "x1: %f", x1);
-  RCLCPP_INFO(this->get_logger(), "y1: %f", y1);
-
-  RCLCPP_INFO(this->get_logger(), "x2: %f", x2);
-  RCLCPP_INFO(this->get_logger(), "y2: %f", y2);
+  if (debug_){
+    RCLCPP_INFO(this->get_logger(), "x1: %f", x1);
+    RCLCPP_INFO(this->get_logger(), "y1: %f", y1);
+    
+    RCLCPP_INFO(this->get_logger(), "x2: %f", x2);
+    RCLCPP_INFO(this->get_logger(), "y2: %f", y2);
+  }
 
 
 
@@ -245,28 +247,35 @@ void PositionEstimator::processObstacles(){
     //   odom_params_.twist_covariance_diagonal[index];
   }
 
-  RCLCPP_INFO(this->get_logger(), "Dist1: %f", sqrt(dist1));
-  RCLCPP_INFO(this->get_logger(), "Dist2: %f", sqrt(dist2));
 
-  RCLCPP_INFO(this->get_logger(), "atan in : %f", poteau1.center.y / poteau1.center.x);
-  RCLCPP_INFO(this->get_logger(), "atan: %f", atan(poteau1.center.y / poteau1.center.x));
-  RCLCPP_INFO(this->get_logger(), "acos: %f", acos((1.594 + x1)/sqrt(dist1)));
-
-  if (poteau1.center.x < 0){
-    RCLCPP_INFO(this->get_logger(), "Negative x");
-  }
-
-  if (poteau1.center.y < 0){
-    RCLCPP_INFO(this->get_logger(), "Negative y");
-  }
   double add = 0;
   if (poteau1.center.x < 0 && poteau1.center.y < 0 || poteau1.center.x < 0 && poteau1.center.y > 0){
     add = 3.141592653;
   }
 
-  // this works but I am not sure why, I kept changing it until it worked
+  //! this works but I am not sure why, I kept changing it until it worked
   theta1 = 3.141592653 - atan(poteau1.center.y / poteau1.center.x) - acos((1.594 + x1)/sqrt(dist1)) + add - 1;
-  RCLCPP_INFO(this->get_logger(), "Theta: %f", theta1);
+  
+  if (debug_){
+
+    RCLCPP_INFO(this->get_logger(), "Dist1: %f", sqrt(dist1));
+    RCLCPP_INFO(this->get_logger(), "Dist2: %f", sqrt(dist2));
+  
+    RCLCPP_INFO(this->get_logger(), "atan in : %f", poteau1.center.y / poteau1.center.x);
+    RCLCPP_INFO(this->get_logger(), "atan: %f", atan(poteau1.center.y / poteau1.center.x));
+    RCLCPP_INFO(this->get_logger(), "acos: %f", acos((1.594 + x1)/sqrt(dist1)));
+  
+    if (poteau1.center.x < 0){
+      RCLCPP_INFO(this->get_logger(), "Negative x");
+    }
+  
+    if (poteau1.center.y < 0){
+      RCLCPP_INFO(this->get_logger(), "Negative y");
+      
+    }
+    RCLCPP_INFO(this->get_logger(), "Theta: %f", theta1);
+  }
+
   tf2::Quaternion orientation;
   orientation.setRPY(0.0, 0.0, theta1);
   odom_msg.pose.pose.orientation = tf2::toMsg(orientation);

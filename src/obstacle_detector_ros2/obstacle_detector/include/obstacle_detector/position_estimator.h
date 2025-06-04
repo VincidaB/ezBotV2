@@ -66,6 +66,8 @@ private:
 	bool is_yellow_;
 	double max_filter_distance_;
 
+	bool debug_ = false;
+
 };
 
 } // namespace obstacle_detector
