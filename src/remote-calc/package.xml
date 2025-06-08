@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ezbot-v2</name>
-  <version>0.0.2</version>
+  <name>remote_calc</name>
+  <version>0.0.1</version>
   <description>
-    A ROS2 package containing a collection of nodes for the ezBotV2 robot.
+    A ROS2 package containing the remote calculator nodes for ezbotV2.
   </description>
   <maintainer email="vincent.belpois@gmail.com">Vincent Belpois</maintainer>
   <license>GNU GPL v3</license>
@@ -15,10 +15,6 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
-
-  <depend>xacro</depend>
-
-  <depend>robot_localization</depend>
 
   <export>
       <build_type>ament_cmake</build_type>
