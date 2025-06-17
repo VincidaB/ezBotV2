@@ -45,12 +45,12 @@ RobotVelocity Kinematics::getBodyVelocity(const std::vector<double> & wheels_vel
   double wm1 = wheels_vel.at(1);
   double wm2 = wheels_vel.at(2);
   // TODO update to 3 wheeled robot
-  vel.vx = (wm0 - wm1)* robot_params_.wheel_radius;
+  vel.vx = (wm1 - wm2)* robot_params_.wheel_radius / sqrt(3);
 
-  vel.vy = (wm0 - wm2) * robot_params_.wheel_radius;
+  vel.vy = -(2*wm0 - wm1 - wm2) * robot_params_.wheel_radius / 3.0;
   
   vel.omega = (1/robot_params_.robot_radius) * (wm0 + wm1 + wm2) 
-              * robot_params_.wheel_radius;
+              * robot_params_.wheel_radius / 3;
 
   return vel;
 }

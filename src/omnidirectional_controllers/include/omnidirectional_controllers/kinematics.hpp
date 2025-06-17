@@ -30,7 +30,7 @@
 
 namespace omnidirectional_controllers {
 
-constexpr double OMNI_ROBOT_MAX_WHEELS = 4;
+constexpr double OMNI_ROBOT_MAX_WHEELS = 3;
 
 class Kinematics {
  public:
