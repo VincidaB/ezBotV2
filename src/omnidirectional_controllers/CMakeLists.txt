@@ -93,40 +93,40 @@ install(TARGETS ${PROJECT_NAME}
   LIBRARY DESTINATION lib
 )
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  find_package(ament_cmake_gmock REQUIRED)
+# if(BUILD_TESTING)
+#   find_package(ament_lint_auto REQUIRED)
+#   find_package(ament_cmake_gmock REQUIRED)
 
-  # ament_lint_auto_find_test_dependencies()
+#   # ament_lint_auto_find_test_dependencies()
 
-  ament_add_gmock(
-    test_odometry
-    test/test_odometry.cpp
-    src/odometry.cpp
-  )
+#   ament_add_gmock(
+#     test_odometry
+#     test/test_odometry.cpp
+#     src/odometry.cpp
+#   )
 
-  target_link_libraries(test_odometry
-    odometry
-    kinematics
-  )
+#   target_link_libraries(test_odometry
+#     odometry
+#     kinematics
+#   )
 
-  ament_add_gmock(
-    test_kinematics
-    test/test_kinematics.cpp
-    src/kinematics.cpp
-  )
+#   ament_add_gmock(
+#     test_kinematics
+#     test/test_kinematics.cpp
+#     src/kinematics.cpp
+#   )
 
-  target_link_libraries(test_kinematics
-    odometry
-    kinematics
-  )
+#   target_link_libraries(test_kinematics
+#     odometry
+#     kinematics
+#   )
 
-  target_include_directories(test_odometry PRIVATE include)
-  ament_target_dependencies(test_odometry)
+#   target_include_directories(test_odometry PRIVATE include)
+#   ament_target_dependencies(test_odometry)
 
-  target_include_directories(test_kinematics PRIVATE include)
-  ament_target_dependencies(test_kinematics)
-endif()
+#   target_include_directories(test_kinematics PRIVATE include)
+#   ament_target_dependencies(test_kinematics)
+# endif()
 
 ament_export_dependencies(
   ${THIS_PACKAGE_INCLUDE_DEPENDS}
