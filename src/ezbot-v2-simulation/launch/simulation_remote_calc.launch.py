@@ -147,9 +147,9 @@ def generate_launch_description():
     image_bridge = Node(package='ros_gz_image', executable='image_bridge',
                 arguments=[
                     '/remote_calc1/remote_calc_cam1/img_raw',
-                    '/robot1/camera1/image_raw',
-                    '/robot1/camera2/image_raw',
-                    '/robot1/camera3/image_raw',
+                    '/robot1/camera1/img_raw',
+                    '/robot1/camera2/img_raw',
+                    '/robot1/camera3/img_raw',
                     ],
                 output='screen')
 
