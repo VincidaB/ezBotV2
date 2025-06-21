@@ -18,6 +18,7 @@
   <run_depend>ezbot-v2</run_depend>
   <run_depend>remote_calc</run_depend>
   <run_depend>gz_ros2_control</run_depend>
+  <run_depend>compressed_image_transport</run_depend>
     <export>
         <build_type>ament_cmake</build_type>
         <gazebo_ros gazebo_model_path="${prefix}/models"/>
