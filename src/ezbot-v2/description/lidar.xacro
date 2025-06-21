@@ -4,7 +4,7 @@
     <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="base_laser"/>
-        <origin xyz="0.0 0 0.41" rpy="0 0 1.0471975512"/>
+        <origin xyz="0.0 0 0.41" rpy="0 0 0"/>
     </joint>
     <joint name="ldlidar_node" type="fixed">
         <parent link="base_laser"/>

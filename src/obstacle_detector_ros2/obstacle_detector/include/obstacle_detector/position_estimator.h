@@ -18,6 +18,9 @@
 #include "obstacle_detector/utilities/circle.h"
 #include "obstacle_detector/utilities/point_set.h"
 
+#include <Eigen/Dense>
+
+
 namespace obstacle_detector
 {
 
@@ -68,6 +71,16 @@ private:
 
 	bool debug_ = false;
 
+	struct Position {
+			float x;
+			float y;
+	};
+
+	std::vector<Position> yellow_poteaux_positions_ = {
+			{ -1.594f,  0.950f }, // poteau 0
+			{ -1.594f, -0.950f }, // poteau 1
+			{  1.594f,  0.0f   }  // poteau 2
+	};
 };
 
 } // namespace obstacle_detector

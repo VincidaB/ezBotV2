@@ -81,208 +81,118 @@ void PositionEstimator::obstaclesCallback(const obstacle_msgs::msg::Obstacles::S
   processObstacles();
 }
 
-void PositionEstimator::processObstacles(){
-  
-  // find the 3 main poteaux 
-  // They form an isosceles triangle with a short side of 1.9m and a long side of 3.144m
-  
-  // eliminate circles that are more than 3.75m away from ourselves
-  double dist;
-  for(auto& c : circles_){
-    dist = c.center.x*c.center.x + c.center.y*c.center.y;
-    if (sqrt(dist) > max_filter_distance_){
-      circles_.remove(c);
-    }
-  }
+void PositionEstimator::processObstacles()
+{
+  // 1) filter out distant detections (as before)...
+  circles_.erase(std::remove_if(
+    circles_.begin(), circles_.end(),
+    [&](const Circle& c){
+      return std::hypot(c.center.x, c.center.y) > max_filter_distance_;
+    }), circles_.end());
 
-  // find the 3 main poteaux
-
-  // first find the two closest poteaux
-  Circle poteau1;
-  Circle poteau2;
-  double closest_dist_diff = 1000;
-  for (auto& c1 : circles_){
-    for(auto& c2 : circles_){
-      if (c1 == c2){
-        continue;
-      }
-      dist = abs(sqrt((c1.center.x-c2.center.x)*(c1.center.x-c2.center.x)  + (c1.center.y-c2.center.y)*(c1.center.y-c2.center.y)) - 1.9);
-
-      if (dist < closest_dist_diff){
-        closest_dist_diff = dist;
-        poteau1 = c1;
-        poteau2 = c2;
-      }
-    }
-  }
-
-
-  // now find the third poteau
-
-  Circle poteau3;
-  closest_dist_diff = 1000;
-  for (auto& c : circles_){
-    if (c == poteau1 || c == poteau2){
-      continue;
-    }
-    dist = abs(sqrt((c.center.x-poteau1.center.x)*(c.center.x-poteau1.center.x) + (c.center.y-poteau1.center.y)*(c.center.y-poteau1.center.y)) - 3.2843927901516285);
-    // RCLCPP_INFO(this->get_logger(), "Dist: %f", dist);
-    if (dist < closest_dist_diff){
-      poteau3 = c;
-      closest_dist_diff = dist;
-    }
-  }
-
-  if (debug_)
-    RCLCPP_INFO(this->get_logger(), "Poteau3: %f, %f, %f", poteau3.center.x, poteau3.center.y, poteau3.radius);
-
-  // order poteau 1 and 2, so that poteau 1,2,3 is in a trigo order
-  if (poteau1.center.cross(poteau2.center) < 0){
-    Circle temp = poteau1;
-    poteau1 = poteau2;
-    poteau2 = temp;
-  }
-
-
-  // now we have the 3 poteaux, we can calculate the position of the robot
-  // we estimate 3 time using the 3 poteaux and average the results
-  
-  double x1, y1, theta1;
-  double x2, y2, theta2;
-  double x3, y3, theta3;
-
-  double dist1, dist2, dist3;
-  // based on 1st and 2nd poteau
-  if (debug_){
-    RCLCPP_INFO(this->get_logger(), "Poteau1: %f, %f, %f", poteau1.center.x, poteau1.center.y, poteau1.radius);
-    RCLCPP_INFO(this->get_logger(), "Poteau2: %f, %f, %f", poteau2.center.x, poteau2.center.y, poteau2.radius);
-  }
-  dist1 = poteau1.center.x*poteau1.center.x + poteau1.center.y*poteau1.center.y;
-  dist2 = poteau2.center.x*poteau2.center.x + poteau2.center.y*poteau2.center.y;
-  dist3 = poteau3.center.x*poteau3.center.x + poteau3.center.y*poteau3.center.y;
-
-  y1 = - (dist1 - dist2 + 1.9*1.9)/(2*1.9) + 1 ;
-  x1 = sqrt(dist2 - (1.9-(0.95-y1))*(1.9-(0.95-y1))) - 1.594 ;
-
-  //based on 1st and third poteau
-
-  double P1x = -1.594;
-  double P1y = 0.95;
-  double P2x = -1.594;
-  double P2y = -0.95;
-  double P3x = 1.594;
-
-
-  double A = 2*(P2x-P1x);
-  double B = 2*(P2y-P1y);
-  double C = dist1-dist2 - P1x*P1x - P1y*P1y + P2x*P2x + P2y*P2y;
-  double D = 2*(P3x-P2x);
-  double E = 2*(-P2y);
-  double F = dist2-dist3 - P2x*P2x - P2y*P2y + P3x*P3x ;
-
-
-  x2 = (C*E - F*B)/(A*E - B*D);
-  y2 = (C*D - A*F)/(B*D - A*E);
-
-
-  if (debug_){
-    RCLCPP_INFO(this->get_logger(), "x1: %f", x1);
-    RCLCPP_INFO(this->get_logger(), "y1: %f", y1);
-    
-    RCLCPP_INFO(this->get_logger(), "x2: %f", x2);
-    RCLCPP_INFO(this->get_logger(), "y2: %f", y2);
-  }
-
-
-
-  // RCLCPP_INFO(this->get_logger(), "dist1: %f", sqrt(dist1));
-  // RCLCPP_INFO(this->get_logger(), "dist2: %f", sqrt(dist2));
-
-  // publish markers for the poteaux
-
-  visualization_msgs::msg::Marker marker;
-  marker.header.frame_id = base_frame_id_;
-  marker.header.stamp = stamp_;
-  marker.ns = "poteaux";
-  marker.id = 0;
-  marker.type = visualization_msgs::msg::Marker::SPHERE_LIST;
-  marker.action = visualization_msgs::msg::Marker::ADD;
-  marker.color.r = 1.0;
-  marker.color.g = 1.0;
-  marker.color.a = 1.0;
-
-  geometry_msgs::msg::Point p;
-  p.x = poteau1.center.x;
-  p.y = poteau1.center.y;
-  marker.points.push_back(p);
-  p.x = poteau2.center.x;
-  p.y = poteau2.center.y;
-  marker.points.push_back(p);
-  p.x = poteau3.center.x;
-  p.y = poteau3.center.y;
-  marker.points.push_back(p);
-  
-  marker.scale.x = 0.1;
-  marker.scale.y = 0.1;
-  marker.scale.z = 0.1;
-
-  
-  marker_candidates_pub_->publish(marker);
-
-  nav_msgs::msg::Odometry odom_msg;
-  odom_msg.header.stamp = stamp_;
-  odom_msg.header.frame_id = "robot1/odom";
-
-  odom_msg.pose.pose.position.x = x2;
-  odom_msg.pose.pose.position.y = y2;
-  odom_msg.pose.pose.position.z = 0.0;
-
-  constexpr size_t NUM_DIMENSIONS = 6;
-  for (size_t index = 0; index < 6; ++index) {
-    // 0, 7, 14, 21, 28, 35
-    const size_t diagonal_index = NUM_DIMENSIONS * index + index;
-    odom_msg.pose.covariance[diagonal_index] =
-      0.01;
-    // odom_msg.twist.covariance[diagonal_index] =
-    //   odom_params_.twist_covariance_diagonal[index];
-  }
-
-
-  double add = 0;
-  if (poteau1.center.x < 0 && poteau1.center.y < 0 || poteau1.center.x < 0 && poteau1.center.y > 0){
-    add = 3.141592653;
-  }
-
-  //! this works but I am not sure why, I kept changing it until it worked
-  theta1 = 3.141592653 - atan(poteau1.center.y / poteau1.center.x) - acos((1.594 + x1)/sqrt(dist1)) + add - 1;
-  
-  if (debug_){
-
-    RCLCPP_INFO(this->get_logger(), "Dist1: %f", sqrt(dist1));
-    RCLCPP_INFO(this->get_logger(), "Dist2: %f", sqrt(dist2));
-  
-    RCLCPP_INFO(this->get_logger(), "atan in : %f", poteau1.center.y / poteau1.center.x);
-    RCLCPP_INFO(this->get_logger(), "atan: %f", atan(poteau1.center.y / poteau1.center.x));
-    RCLCPP_INFO(this->get_logger(), "acos: %f", acos((1.594 + x1)/sqrt(dist1)));
-  
-    if (poteau1.center.x < 0){
-      RCLCPP_INFO(this->get_logger(), "Negative x");
-    }
-  
-    if (poteau1.center.y < 0){
-      RCLCPP_INFO(this->get_logger(), "Negative y");
-      
-    }
-    RCLCPP_INFO(this->get_logger(), "Theta: %f", theta1);
-  }
-
-  tf2::Quaternion orientation;
-  orientation.setRPY(0.0, 0.0, theta1);
-  odom_msg.pose.pose.orientation = tf2::toMsg(orientation);
-
-  estimated_position_pub_->publish(odom_msg);
-
+  // 1) Extract exactly three LiDAR detections into a small std::array:
+std::array<Eigen::Vector2d,3> lidar_pts;
+if (circles_.size() < 3) {
+  RCLCPP_WARN(this->get_logger(), "Not enough circles detected, expected 3, got %zu", circles_.size());
+  return; // Not enough points to estimate position
 }
+{
+  auto it = circles_.begin();
+  for(int i = 0; i < 3; ++i, ++it) {
+    lidar_pts[i].x() = it->center.x;
+    lidar_pts[i].y() = it->center.y;
+  }
+}
+
+// 2) Prepare a permutation of the indices [0,1,2] to assign these to your
+//    three known map‐points (yellow_poteaux_positions_[i].x / .y):
+std::vector<int> perm = {0,1,2};
+
+// 3) Variables to hold the best result:
+Eigen::Matrix2d bestR;
+Eigen::Vector2d best_t;
+double best_error = std::numeric_limits<double>::infinity();
+
+// 4) Try all 6 matchings:
+do {
+  // Build the two 2×3 matrices for this assignment:
+  Eigen::Matrix<double,2,3> P_lidar, P_map;
+  for(int j = 0; j < 3; ++j) {
+    P_lidar.col(j) = lidar_pts[j];
+    P_map  (0,j) = yellow_poteaux_positions_[ perm[j] ].x;
+    P_map  (1,j) = yellow_poteaux_positions_[ perm[j] ].y;
+  }
+
+  // Compute centroids:
+  Eigen::Vector2d cL = P_lidar.rowwise().mean();
+  Eigen::Vector2d cM = P_map.  rowwise().mean();
+
+  // Demean:
+  Eigen::Matrix<double,2,3> Ql = P_lidar.colwise() - cL;
+  Eigen::Matrix<double,2,3> Qm = P_map.  colwise() - cM;
+
+  // Cross‐covariance:
+  Eigen::Matrix2d H = Ql * Qm.transpose();
+
+  // SVD:
+  Eigen::JacobiSVD<Eigen::Matrix2d> svd(
+    H, Eigen::ComputeFullU | Eigen::ComputeFullV);
+  Eigen::Matrix2d U = svd.matrixU();
+  Eigen::Matrix2d V = svd.matrixV();
+
+  // Rotation (enforce det=+1):
+  Eigen::Matrix2d R = V * U.transpose();
+  if (R.determinant() < 0) {
+    V.col(1) *= -1;
+    R = V * U.transpose();
+  }
+
+  // Translation:
+  Eigen::Vector2d t = cM - R * cL;
+
+  // Compute sum of squared residuals:
+  double err = 0;
+  for(int j = 0; j < 3; ++j) {
+    Eigen::Vector2d pred = R * P_lidar.col(j) + t;
+    err += (pred - P_map.col(j)).squaredNorm();
+  }
+  // RCLCPP_INFO(this->get_logger(), "Permutation %s: error = %f",
+  //   std::to_string(perm[0]) + std::to_string(perm[1]) + std::to_string(perm[2]).c_str(), err);
+  // Keep best:
+  if (err < best_error) {
+    best_error = err;
+    bestR       = R;
+    best_t      = t;
+  }
+
+} while(std::next_permutation(perm.begin(), perm.end()));
+
+// RCLCPP_INFO(this->get_logger(), "Best permutation: %s, error = %f",
+  // std::to_string(perm[0]) + std::to_string(perm[1]) + std::to_string(perm[2]).c_str(), best_error);
+
+// 5) Extract heading from bestR:
+double theta = std::atan2(bestR(1,0), bestR(0,0));
+
+// 6) Now publish exactly as before, but using best_t:
+nav_msgs::msg::Odometry odom;
+odom.header.stamp    = stamp_;
+odom.header.frame_id = p_frame_id_;        // e.g. "map"
+odom.child_frame_id  = "robot1/odom";
+
+odom.pose.pose.position.x = best_t.x();
+odom.pose.pose.position.y = best_t.y();
+odom.pose.pose.position.z = 0.0;
+// TODO : actually evaluate and change these values
+odom.pose.covariance[0] = best_error;  // x variance
+odom.pose.covariance[7] = best_error;  // y variance
+odom.pose.covariance[35] = best_error; // yaw variance // this makes no sense but I think it is still correlated with the error
+tf2::Quaternion q;
+q.setRPY(0, 0, theta);
+odom.pose.pose.orientation = tf2::toMsg(q);
+
+estimated_position_pub_->publish(odom);
+}
+
 
 #include <rclcpp_components/register_node_macro.hpp>
 RCLCPP_COMPONENTS_REGISTER_NODE(obstacle_detector::PositionEstimator)

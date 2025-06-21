@@ -18,6 +18,7 @@ endif()
 find_package(ament_cmake_auto REQUIRED)
 find_package(Armadillo REQUIRED)
 find_package(Boost 1.54.0 REQUIRED system)
+find_package(Eigen3 REQUIRED)
 ament_auto_find_build_dependencies()
 
 
@@ -55,6 +56,7 @@ set(TARGET position_estimator)
 ament_auto_add_library(${TARGET} SHARED
   src/${TARGET}.cpp
 )
+target_link_libraries(${TARGET} Eigen3::Eigen)
 rclcpp_components_register_node(${TARGET}
   PLUGIN "obstacle_detector::PositionEstimator"
   EXECUTABLE ${TARGET}_node
