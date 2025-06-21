@@ -112,20 +112,39 @@ def generate_launch_description():
         output='screen'
     )
     
-    bridge = Node(package='ros_gz_bridge', executable='parameter_bridge',
-                arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-                            '/robot1/omnidirectional_controller/cmd_vel_unstamped@geometry_msgs/msg/Twist@gz.msgs.Twist',
-                            'robot1/lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
-                            'robot1/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
-                            '/robot1/camera1/img_raw@sensor_msgs/msg/Image@gz.msgs.Image',
-                            '/robot1/camera2/img_raw@sensor_msgs/msg/Image@gz.msgs.Image',
-                            '/robot1/camera3/img_raw@sensor_msgs/msg/Image@gz.msgs.Image',
-                            'robot1/camera3_segm/colored_map@sensor_msgs/msg/Image@gz.msgs.Image',
-                            'robot1/camera3_segm/labels_map@sensor_msgs/msg/Image@gz.msgs.Image',
-                            '/robot1/camera1/camera_info@sensor_msgs/CameraInfo[gz.msgs.CameraInfo',
-                            ],
-                output='screen')
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{
+            'config_file': os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_bridge.yaml')
+        }],
+        output='screen'
+    )
 
+    image_bridge = Node(package='ros_gz_image', executable='image_bridge',
+                arguments=[
+                    '/remote_calc1/remote_calc_cam1/img_raw',
+                    '/robot1/camera1/img_raw',
+                    '/robot1/camera2/img_raw',
+                    '/robot1/camera3/img_raw',
+                    ],
+                output='screen'
+    )
+
+    obstacle_detector = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('obstacle_detector'), 'launch', 'demo.launch.py')
+        ),
+        launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+
+    ekf1 = Node(package='robot_localization', 
+                executable='ekf_node',
+                parameters=[os.path.join(get_package_share_directory('ezbot-v2'), 'config', 'localization.yaml')],
+                #namespace='robot1', 
+                output='screen'
+    )
 
 
     # Launch them all!
@@ -140,4 +159,7 @@ def generate_launch_description():
         yellow_x_arg,
         yellow_y_arg,
         bridge,
+        image_bridge,
+        obstacle_detector,
+        ekf1,
     ])

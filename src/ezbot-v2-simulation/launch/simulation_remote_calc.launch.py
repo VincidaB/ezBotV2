@@ -34,7 +34,7 @@ def spawn_yellow_robot(context : LaunchContext, arg1 : LaunchConfiguration, arg2
                                    '-entity', 'EzBot',
                                    '-x', x_pos,
                                    '-y', y_pos,
-                                   '-z', '0.1',
+                                   '-z', '0.05',
                                     '--namespace', 'robot1' ,
                                     '--name', 'yellow_robot'],
                         output='screen')
@@ -141,7 +141,7 @@ def generate_launch_description():
         parameters=[{
             'config_file': os.path.join(get_package_share_directory(simulation_package_name), 'config', 'gz_bridge.yaml')
         }],
-        output='screen'
+        output='screen',
     )
 
     image_bridge = Node(package='ros_gz_image', executable='image_bridge',
@@ -151,7 +151,8 @@ def generate_launch_description():
                     '/robot1/camera2/img_raw',
                     '/robot1/camera3/img_raw',
                     ],
-                output='screen')
+                output='screen',
+    )
 
 
 
