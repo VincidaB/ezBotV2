@@ -1,0 +1,46 @@
+- ros_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "/robot1/omnidirectional_controller/cmd_vel_unstamped"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+
+- ros_topic_name: "robot1/lidar"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+
+- ros_topic_name: "robot1/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+
+- ros_topic_name: "robot1/camera3_segm/colored_map"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "robot1/camera3_segm/labels_map"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "/robot1/camera1/img_raw/camera_info"
+  gz_topic_name: "/robot1/camera1/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+
+
+- ros_topic_name: "/robot1/camera2/img_raw/camera_info"
+  gz_topic_name: "/robot1/camera2/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+
+
+- ros_topic_name: "/robot1/camera3/img_raw/camera_info"
+  gz_topic_name: "/robot1/camera3/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  
+- ros_topic_name: "/remote_calc1/remote_calc_cam1/img_raw/camera_info"
+  gz_topic_name: "/remote_calc1/remote_calc_cam1/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
