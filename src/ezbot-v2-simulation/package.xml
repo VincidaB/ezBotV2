@@ -20,10 +20,7 @@
   <run_depend>gz_ros2_control</run_depend>
     <export>
         <build_type>ament_cmake</build_type>
-        <!--
-        <gazebo_ros gazebo_model_path="${prefix}/share/${PROJECT_NAME}/models"/>
-        <gazebo_ros gazebo_media_path="${prefix}/share/${PROJECT_NAME}/models"/>
-        -->
+        <gazebo_ros gazebo_model_path="${prefix}/models"/>
     </export>
 
 </package>
