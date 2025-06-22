@@ -44,3 +44,8 @@
   gz_topic_name: "/remote_calc1/remote_calc_cam1/camera_info"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "gz.msgs.CameraInfo"
+
+- ros_topic_name: "/robot1/gt_odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  gz_topic_name: "/model/yellow_robot/odometry"
