@@ -89,7 +89,7 @@ def generate_launch_description():
     )
     
     # world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2026_exported_gz.sdf')
-    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2026_2_elements_center.sdf')
+    world = os.path.join(get_package_share_directory(simulation_package_name), 'worlds', 'Table_2026_empty_poteaux.sdf')
     
 
     gz_server_cmd = IncludeLaunchDescription(

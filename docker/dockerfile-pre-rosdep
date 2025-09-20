@@ -1,12 +1,12 @@
 FROM osrf/ros:jazzy-desktop-full
 
-ARG USER_ID
-ARG GROUP_ID
+# ARG USER_ID
+# ARG GROUP_ID
 
-RUN groupadd -g ${GROUP_ID} myuser && \
-    useradd -m -u ${USER_ID} -g ${GROUP_ID} myuser
+# RUN groupadd -g ${GROUP_ID} myuser && \
+#     useradd -m -u ${USER_ID} -g ${GROUP_ID} myuser
 
-USER myuser
+# USER myuser
 
 RUN apt-get update && \
     apt-get upgrade -y && \
