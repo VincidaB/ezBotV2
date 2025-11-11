@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
-  <model name='Table_2024'>
+  <model name='Table_2026'>
    	<static>true</static>
     <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
         <label>1</label>
@@ -22,7 +22,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>table2026.dae</uri>
+            <uri>model://Table2026/table2026.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -35,7 +35,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>table2026.dae</uri>
+            <uri>model://Table2026/table2026.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
