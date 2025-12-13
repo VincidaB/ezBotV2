@@ -8,7 +8,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>ezvbotv2.stl</uri>
+            <uri>ezvbotv1.5.stl</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
